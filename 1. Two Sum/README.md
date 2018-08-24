@@ -28,7 +28,7 @@ Skill Logs：
 
 1.180824 能想到的就是 暴力查找，两个for循环；但要注意边界。
 
-2.用hash表。
+2.用hash表。因为复杂度O(n)。需要了解unordered_map。
 
 
 ## 代码

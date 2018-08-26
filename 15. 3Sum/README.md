@@ -33,3 +33,45 @@ A solution set is:
 
 
 ## 代码
+
+1. 先排序，再前后夹逼。检测时超时Time Limit Exceeded.
+
+```
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        
+        vector<vector<int>> result;
+        sort(nums.begin(),nums.end());
+        
+        for(int i=0;i<nums.size()-2;i++){
+            while(i>0 && nums[i-1]==nums[i]) continue;  //skip duplication 满足（）内部情况则跳过去。
+            int a = -nums[i];
+            int j = i+1;
+            int k = nums.size()-1;
+            
+            if(nums[j]+nums[k] == a){
+                vector<int> temp;
+                temp.push_back(nums[i]);
+                temp.push_back(nums[j]);
+                temp.push_back(nums[k]);
+                
+                result.push_back(temp);
+                while(j<k && nums[j]==nums[j+1]) j++;
+                while(k>j && nums[k]==nums[k+1]) k--;
+                    
+                j++;
+                k--;    //由于已经排好序了，当nums[j]+nums[k]==a符合时，j和k一定同时夹逼移动来查找新的匹配位置项。
+                
+            }else if(nums[j]+nums[k]<a){
+                while(j<k && nums[j]==nums[j+1]) j++;
+                j++;               
+            }else{
+                while(k>j && nums[k]==nums[k+1]) k--;
+                k--;
+            }
+        }
+        return result;
+    }
+};
+```

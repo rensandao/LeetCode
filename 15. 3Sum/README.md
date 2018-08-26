@@ -34,7 +34,7 @@ A solution set is:
 
 ## 代码
 
-1. 先排序，再前后夹逼。检测时超时Time Limit Exceeded.
+1. 先排序，再前后夹逼。but, 检测时超时Time Limit Exceeded.
 
 ```
 class Solution {

@@ -15,8 +15,10 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 ## 思路
 
-
-
+1. 跟题1、15思路雷同，先排序后前后夹逼原则；
+2. 找到边界问题：
+    * 三个元素sum=target；
+    * 三个元素sum！=target时，查找到s1<target和s2>target，比较s1和s2。
 
 ## 代码
 

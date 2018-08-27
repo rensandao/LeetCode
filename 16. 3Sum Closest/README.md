@@ -66,3 +66,14 @@ public:
 };
 ```
 
+## 知识点
+
+1. INT_MAX
+
+   INT_MIN在标准头文件limits.h中定义：
+   ```
+   #define INT_MAX 2147483647
+   #define INT_MIN (-INT_MAX - 1)
+   ```
+   [reference](https://blog.csdn.net/TwT520Ly/article/details/53038345)
+

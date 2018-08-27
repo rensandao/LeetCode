@@ -27,12 +27,13 @@ A solution set is:
 
 总的思想仍是：先排序，后前后夹逼准则。
 
-方式上分两种：
+实现方法：
 
-* 利用3sum的轮子，加一个for循环；
-* 两个for循环，再两个数前后夹逼；
-
-
+1. 两个for循环，再两个数前后夹逼；
+2. 利用3sum的轮子，加一个for循环；
+3. map缓冲
+4. mutimap
+5. upper_bound()  对比问题
 
 ## 代码
 1.180817 两个for，前后夹逼。  检测不完整。
@@ -88,10 +89,51 @@ public:
 };
 ```
 
-
+2. 借鉴
+```
+class Solution {
+public:
+    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+        vector<vector<int>> result;
+        if(nums.size()<4) return result;
+        sort(nums.begin(), nums.end());
+        for(auto a=nums.begin();a<prev(nums.end(),3);++a){     //对比上段数组下标表示法，使用auto和指针*a，*b,*c,*d能简化不少代码 
+            for(auto b=next(a);b<prev(nums.end(),2);++b){  
+                auto c=next(b);
+                auto d=prev(nums.end());
+                while(c<d){
+                    auto sum=*a+*b+*c+*d;
+                    if(sum<target){
+                        ++c;                  
+                    }else if(sum>target){
+                        --d;  
+                    }else{
+                        result.push_back({*a, *b, *c, *d});
+                        ++c;
+                        --d;
+                    }   
+                }
+            }
+        } 
+        sort(result.begin(),result.end());
+        result.erase(unique(result.begin(),result.end()),result.end());    //unqique(): Remove consecutive duplicates in range
+        return result;   
+    }
+};
+```
 
 ## 知识点
 
-1. auto(result.begin(), result.end())
+1. [auto()](https://www.cnblogs.com/KunLunSu/p/7861330.html)  
 
-2. result.erase(unique(result.begin(), result.end()), result.end())
+2. [std::prev(nums.end(),2)](https://en.cppreference.com/w/cpp/iterator/prev)
+
+   *[延伸](https://www.cnblogs.com/zhoutaotao/p/3833249.html)
+
+3. [std::unique()](http://www.cplusplus.com/reference/algorithm/unique/)
+
+4. [std::vector::erase()](http://www.cplusplus.com/reference/vector/vector/erase/)
+
+5. [std::upper_bound](http://www.cplusplus.com/reference/algorithm/upper_bound/)
+
+

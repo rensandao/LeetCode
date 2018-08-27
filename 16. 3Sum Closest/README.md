@@ -47,7 +47,7 @@ public:
                 if(sum==target){
                     return target;
                 }
-                if(abs(target-sum)<min_gap){
+                if(abs(target-sum)<min_gap){            //此处的min_gap 设计可以再考虑更简洁点
                     min_gap = abs(target-sum);
                     result = sum;
                 }

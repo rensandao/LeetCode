@@ -118,7 +118,9 @@ public:
         return result;
     }
 };
-
-
-
 ```
+## 知识点
+
+1. commit时报错：[reference binding to null pointer of type ‘value_type](https://blog.csdn.net/m0_38088298/article/details/79249044)
+
+  

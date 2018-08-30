@@ -14,13 +14,13 @@
 
 int Finbonacci_Search(int *a, int n, int key)
 {
-  int low, high, mid, i, k;
+  int low, high, mid, k;
   low=1;
   high=n;
   k=0;
   while(n>F[k]-1)     //最高下标对应的斐波那契数列的位置
     k++;
-  for(i=n;i<F[k]-1;i++)
+  for(int i=n;i<F[k]-1;i++)
     a[i]=a[n];
   
   while(low<=high)
@@ -34,7 +34,7 @@ int Finbonacci_Search(int *a, int n, int key)
     else if(key>a[mid])
     {
       low=mid+1;       
-      k=k-2;
+      k=k-2;    // 理解问题？？
     }
     else
     {
@@ -47,3 +47,12 @@ int Finbonacci_Search(int *a, int n, int key)
   return 0;
 
 }
+
+/*
+核心：
+1）key=a[mid]时，查找就成功；
+2）key<a[mid],左区域从low到mid-1，个数为F[k-1]-1;
+3) key>a[mid],右区域第m+1到high个，个数为F[k-2]-1;
+
+*/
+

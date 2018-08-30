@@ -30,7 +30,6 @@ The two tuples are:
 
 1.先排序后夹逼查找。
 
-
 ## 代码
 
  1. 先排序后查找，利用upper_bound和lower_bound.
@@ -63,7 +62,7 @@ public:
 };
  ```
  
- 2. 利用unordered_map的键-值对，存储和查找。
+ 2. 利用unordered_map的键-值对，存储和查找。散列表hash.
  ```
  class Solution {
 public:

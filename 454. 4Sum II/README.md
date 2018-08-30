@@ -77,9 +77,9 @@ public:
         int result=0;
         for(auto c:C){
             for(auto d:D){
-                auto it=sum1.find(-(c+d));
+                auto it=sum1.find(-(c+d));   // 0 or 1
                 if(it !=sum1.end()){
-                    result+= it->second;
+                    result+= it->second;     // accumulate
                 }
             }
         }

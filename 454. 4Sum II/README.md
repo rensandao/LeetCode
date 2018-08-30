@@ -33,6 +33,39 @@ The two tuples are:
 
 ## 代码
 
+ 1. 先排序后查找，利用upper_bound和lower_bound.
+ ```
+ class Solution {
+public:
+    int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D) {
+        int result=0;
+        vector<int> sum1;
+        for(int i=0; i<A.size();i++){
+            for(int j=0; j<B.size();j++){
+                 sum1.push_back(A[i]+B[j]);
+            }
+        }
+        
+        vector<int> sum2;
+        for(int m=0;m<C.size();m++){
+            for(int n=0;n<D.size();n++){
+                sum2.push_back(C[m]+D[n]);
+            }
+        }
+        
+        sort(sum2.begin(), sum2.end()); 
+        for(int i=0; i<sum1.size();i++){
+            int target = -sum1[i];
+            result += upper_bound(sum2.begin(),sum2.end(), target) - lower_bound(sum2.begin(),sum2.end(), target); 
+        }
+        return result;
+    }
+};
+ ```
+ 
+ 2. 利用unordered_map的键-值对，存储和查找。
+
 ## 知识点
 
-1. unordered_map
+1. upper_bound
+2. unordered_map

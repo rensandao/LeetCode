@@ -1,4 +1,4 @@
-/* interpolation search */
+/* interpolation search, O(logn) */
 int Interplolation_Search(int*a, int n, int key)
 {
   int low, high,mid;

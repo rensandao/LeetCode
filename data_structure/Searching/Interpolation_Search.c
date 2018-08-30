@@ -1,4 +1,6 @@
-/* interpolation search, O(logn) */
+/* interpolation search, O(logn) 
+ 适合用表长交大，而关键字分布均匀
+*/
 int Interplolation_Search(int*a, int n, int key)
 {
   int low, high,mid;

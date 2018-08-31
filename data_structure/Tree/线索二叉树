@@ -1,0 +1,18 @@
+/*二叉树的二叉树线索存储结构定义*/
+
+typedef enum{Link, Thread} PointerTag; // Link==0 指向左右孩子指针；Thread==1 指向前后驱的线索
+
+typedef struct BiThrNode
+{
+  TElemType data;
+  struct BiThrNode *lchild, *rchild;
+  PointerTag LTag;      //左右标志
+  PointerTag RTag;
+} BiThrNode, *BiThrTree;
+
+
+/*
+线索化的实质是将二叉链表中的空指针改为指向前驱或后继的线索。
+前驱或者后继信息只有在遍历二叉树时才能得到，因而`线索化过程就是在遍历过程中修改空指针的过程`。
+
+*/

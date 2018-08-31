@@ -20,23 +20,23 @@ typedef struct BiThrNode
 
 /*中序遍历线索化的递归函数实现*/
 
-BiThrTree pre;    //全局变量，始终指向刚刚访问的节点
-void InThreading(BiThrTree p)
+BiThrTree pre;    //全局变量，始终指向刚刚访问过的结点（按照顺序的） 初始应指向NULL
+void InThreading(BiThrTree p)    //初始化当前输入的结点，结构体，包括数据，左右子树和左右标签Tag；
 {
-  if(p)
+  if(p)  //判断是否有结点；
   {
     InThreading(p->lchild);   //递归左子树线索化
-    if(!p->lchild)
+    if(!p->lchild)            // 若该结点没有左孩子；
     {
-      p->Ltag=Thread;   // 前驱线索
-      p->lchild=pre;    // 左孩子指针指向前驱
+      p->Ltag=Thread;         // 若没有，则标签修改为Thread,表示前驱指针
+      p->lchild=pre;          // 前驱指针指向前一个遍历顺序的结点
     }
-    if(!pre->rchild)
-    {
-      pre->RTag=Thread;
-      pre->rchild=p;
+    if(!pre->rchild)          // 若前一个结点（前驱）没有右孩子
+    {                          
+      pre->RTag=Thread;       // 则修改标签
+      pre->rchild=p;          // 
     }
-    pre = p;
+    pre = p;                  //上述2个if 不会同时执行的。
     Inthreading(p->rchild);  //递归右子树线索化    
   }
 

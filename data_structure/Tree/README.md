@@ -19,7 +19,7 @@
 
 ### 线索二叉树
    
-   [调整后线索二叉树](/Images/)
+   [调整后线索二叉树](https://github.com/rensandao/LeetCode/blob/master/data_structure/Tree/Images/image.png)
 
 ### 树、森林与二叉树的转换
 

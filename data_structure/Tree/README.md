@@ -19,7 +19,9 @@
 
 ### 线索二叉树
    
-   [调整后线索二叉树](<img src="./Images/image.png" width="400px">)
+  调整后线索二叉树
+  
+   <img src="./Images/image.png" width="400px">
 
 ### 树、森林与二叉树的转换
 

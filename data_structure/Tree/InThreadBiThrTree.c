@@ -57,8 +57,19 @@ Status InOrderTraverse_Thr(BiThrTree T)
   BiThrTree p;
   p = T->lchild;
   
-
- 
+  while( p != T)            
+  {
+    while(T->LTag==Link )   //若LTag==Link, 直到中序序列第一结点。
+      p = p->lchild;
+      print("%c", p);
+    while(p->RTag==Thread && p->rchild !=T)  //从第一结点开始，根据rchild指针域 直到 头结点
+    {                                        //如果RTag=1且不是最后则执行，如果RTag=0,则跳出。
+      p = p->rchild;  //
+      print("%c",p->data);
+    }
+    p = p->rchild;                          // 跳到下一个结点；
+  }
+  return OK; 
 }
 
 

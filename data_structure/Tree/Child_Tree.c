@@ -17,4 +17,3 @@ typedef struct
   CTBox nodes{MAX_TREE_SIZE};
   int r,n;
 } CTree;
-

@@ -1,4 +1,4 @@
-/*二叉树的二叉树线索存储结构定义*/
+/*1. 二叉树的二叉树线索存储结构定义*/
 typedef enum{Link, Thread} PointerTag; // Link==0 指向左右孩子指针；Thread==1 指向前后驱的线索
 typedef struct BiThrNode
 {
@@ -16,7 +16,7 @@ typedef struct BiThrNode
 
 */
 
-/*中序遍历线索化的递归函数实现*/
+/*2. 中序遍历线索化的递归函数实现*/
 
 BiThrTree pre;    //全局变量，始终指向刚刚访问过的结点（按照顺序的） 初始应指向NULL
 void InThreading(BiThrTree p)    //初始化当前输入的结点，结构体，包括数据，左右子树和左右标签Tag；
@@ -34,8 +34,39 @@ void InThreading(BiThrTree p)    //初始化当前输入的结点，结构体，
       pre->RTag=Thread;       // 则修改标签
       pre->rchild=p;          // 
     }
-    pre = p;                  //上述2个if 不会同时执行的。
+    pre = p;                  //画图可知，上述2个if 不会同时执行的。
     Inthreading(p->rchild);  //递归右子树线索化    
   }
 
 }
+
+
+/*为了更好遍历操作，作了调整：在上述二叉树线索链表上添加了一个新的结点——头结点！
+并让头结点lchild指针指向二叉树的根节点；
+rchild指向中序排列访问的最后一个节点；
+二叉树中序序列中第一个节点lchild指针和最后一个rchild指针均指向头结点的指针域。
+
+*/
+
+/*3. 基于上述的调整后，以下便是遍历获取数据的算法。
+  T:中序遍历二叉线索链表表示的二叉树
+  T指向头结点，头结点左链lchild指向根节点，头结点右键rchild指向中序遍历的最后一个结点。
+*/
+Status InOrderTraverse_Thr(BiThrTree T)
+{
+  BiThrTree p;
+  p = T->lchild;
+  
+
+ 
+}
+
+
+/*
+小结：
+1. 充分利用二叉树链表中的空指针域的空间（节省了空间）
+2. 保证创建时的一次遍历就可以存储信息，以后随后方便使用前驱后继的信息（节省了时间）
+3. 根据实际问题，如果所用二叉树经常遍历或者查找节点时需要某种遍历序列中的前驱和后继，那么
+    采用这种线索二叉链表的存储结构是很好的选择。
+*/
+

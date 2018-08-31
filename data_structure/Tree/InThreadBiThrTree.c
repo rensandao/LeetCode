@@ -1,7 +1,5 @@
 /*二叉树的二叉树线索存储结构定义*/
-
 typedef enum{Link, Thread} PointerTag; // Link==0 指向左右孩子指针；Thread==1 指向前后驱的线索
-
 typedef struct BiThrNode
 {
   TElemType data;

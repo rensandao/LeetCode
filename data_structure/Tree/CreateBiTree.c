@@ -18,3 +18,4 @@ void CreateBiTree(BiTree *T)
 		CreateBiTree(&(*T)-> rchild);  //构造右子树
 	}
 }
+

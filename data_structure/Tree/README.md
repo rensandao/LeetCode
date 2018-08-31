@@ -1,3 +1,3 @@
 ###知识点
 
- * [结构体的定义的6中常见方式](https://blog.csdn.net/ly666888555/article/details/52206973)
+ * [结构体的定义的6种常见方式](https://blog.csdn.net/ly666888555/article/details/52206973)

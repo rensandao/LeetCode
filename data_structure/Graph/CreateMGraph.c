@@ -25,7 +25,7 @@ void CreateMGraph(MGaph *G)   //?
 		   G->arc[i][j]=INFINITY;
 	for(k=0;k<G->numEdges;k++)
 	{
-		print("输入边（vi,vj）上的下标i，下标j和权重w：\n");
+		print("输入边（vi,vj）上的下标i，下标j和权重w：\n");   //问题在于要手动输入每个权重，如果图的复杂度大的话，工作量也就大了。
 		scanf("%d,%d,%d",&i,&j,&w);
 		G->arc[i][j]=w;
 		G->arc[i][j] = G->arc[i][j];

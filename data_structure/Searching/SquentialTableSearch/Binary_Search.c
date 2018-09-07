@@ -15,7 +15,7 @@ int Binary_Search(int *a, int n, int key)
     else if (key>a[min])
       low =mid+1;
     else
-      return mid;   //mid 即为查找到的位置
+      return mid;   //mid 即为查找到的位置   此处有bug,比如如果出现多个连续相同数据
   }
 
   return 0;

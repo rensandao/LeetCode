@@ -22,6 +22,7 @@ Then 4 is the first bad version.
 ```
 
 ### 思路
+* 最快查找，采用二分查找。 
 
 
 

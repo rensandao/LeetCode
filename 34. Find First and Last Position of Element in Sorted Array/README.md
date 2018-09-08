@@ -40,7 +40,7 @@ public:
         while(low <= high){
             mid = (low + high) /2;  // 折半
             if( target < nums[mid])
-                high = mid -1;      //若查找目标值小于中值，则最高位下标下调
+                high = mid -1;      //若查找目标值小于中值，则最高位等于mid下调一位
             else if(target > nums[mid])
                 low = mid +1;       // 反过来，上调最低位下标
             else

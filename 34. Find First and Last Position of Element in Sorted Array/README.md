@@ -29,6 +29,51 @@ Output: [-1,-1]
 以该位置作为基准，再分别往两段继续查找还有没有target值，如果有的话，则更新下标。
 */
 
+1. 独立分开，调用（超时）
+
+
+2. 就地寻找左右值
+```
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        vector<int> result;
+        int n=nums.size()-1;
+        
+        int low=0, high=n;
+        while(low<high){          //循环结果一定是到临界位置  
+            int mid = (low+high)/2;
+            if(nums[mid]>= target)
+                high = mid;
+            else
+                low = mid+1;             
+        }
+        int start_loc = low;
+        
+        low=0,high=n;
+        while(low<high){
+            int mid =(low+high)/2;
+            if(nums[mid]<target)
+                low = mid+1;
+            else
+                high = mid;                              
+        }
+        int end_loc = low;
+        
+        if(start_loc == end_loc)
+            return vector<int>{-1,-1};   
+        else
+            return vector<int>{start_loc,end_loc};
+    
+      //  return (start_loc == end_loc) ? vector<int>{-1,-1}:vector<int>{start_loc,end_loc};
+        
+    }
+};
+
+
+
+
+```
 
 
 ### 知识点

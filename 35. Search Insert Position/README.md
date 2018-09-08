@@ -17,7 +17,7 @@ Output: 2
 
 ### 代码
 
-1.
+1. 二分查找
 ```
 class Solution {
 public:

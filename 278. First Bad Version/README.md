@@ -27,6 +27,7 @@ Then 4 is the first bad version.
 
 
 ### 代码
+```
 // Forward declaration of isBadVersion API.
 bool isBadVersion(int version);
 
@@ -44,7 +45,7 @@ public:
         return low;         
     }
 };
-
+```
 ### 知识点
 
 

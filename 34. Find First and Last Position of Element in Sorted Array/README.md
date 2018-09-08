@@ -30,6 +30,53 @@ Output: [-1,-1]
 */
 
 1. 独立分开，调用（超时）
+```
+class Solution {
+public:
+      
+    int Binary_Search(vector<int>& nums, int low, int high, int target){
+        int mid;
+        while(low <= high){
+            mid = (low + high) /2;  // 折半
+            if( target < nums[mid])
+                high = mid -1;      //若查找目标值小于中值，则最高位下标下调
+            else if(target > nums[mid])
+                low = mid +1;       // 反过来，上调最低位下标
+            else
+                return mid;               
+            }
+        return -1;
+    }  
+    
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int n = nums.size()-1;
+        int loca = Binary_Search(nums, 0, n, target);
+        
+        vector<int> result; 
+        int low=-1, high=-1;
+        if(loca >0){
+            low=loca;
+            high=loca;
+            
+            int temp1=low; //low postion
+            do{
+                low = temp1;
+                temp1 = Binary_Search(nums,0,low-1,target);
+            }while(temp1>=0);  //一直在低区域找target，直到没有，返回-1，跳出循环体。low值最终锁定在上一次下标值。
+            
+            int temp2=high;
+            do{
+                high = temp2;
+                temp2 = Binary_Search(nums, 0, high+1, target);
+            }while(temp2<=n);  
+        }   
+            
+            result.push_back(low);
+            result.push_back(high);
+            return result; 
+    }
+};
+```
 
 
 2. 就地寻找左右值
@@ -69,10 +116,6 @@ public:
         
     }
 };
-
-
-
-
 ```
 
 

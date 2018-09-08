@@ -126,7 +126,7 @@ public:
     }  
     
 };
-
+```
 2. 就地寻找左右值
 ```
 class Solution {
@@ -165,13 +165,14 @@ public:
     }
 };
 ```
+修正后：
 ```
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
         int n=nums.size();
         int low=0, high=n, mid,start_loc,end_loc;
-        while(low<high){          //这里的临界位置甚至问题？ low<high 以及n=nums.size()的关系！
+        while(low<high){          //这里的临界位置问题？ 如果修改low<=high 以及n=nums.size()-1的逻辑！ 超时问题！？
             mid = (low+high)/2;
             if(nums[mid]>= target)
                 high = mid;
@@ -179,7 +180,7 @@ public:
                 low = mid+1;             
         }
         start_loc = low;
-    
+
         low=0;
         high=n;
         while(low<high){
@@ -195,7 +196,6 @@ public:
     }
 };
 ```
-
 ### 知识点
 
 * [二分查找复杂度]（）

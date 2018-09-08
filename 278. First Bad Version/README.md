@@ -36,7 +36,7 @@ public:
     int firstBadVersion(int n) {
         int low=1,high=n,mid;
         while(low<=high){
-            mid= low + (high-low)/2;    //写法很重要，不然一直会提示超限
+            mid= low + (high-low)/2;  /（low+high)/2有溢出问题。 当low和high的值很大的时候，(low+high)会导致大于溢出值。报错。
             if(isBadVersion(mid))
                 high = mid-1;
             else 

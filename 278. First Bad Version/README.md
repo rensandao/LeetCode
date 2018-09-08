@@ -27,9 +27,24 @@ Then 4 is the first bad version.
 
 
 ### 代码
+// Forward declaration of isBadVersion API.
+bool isBadVersion(int version);
 
-
-
-
+class Solution {
+public:
+    int firstBadVersion(int n) {
+        int low=1,high=n,mid;
+        while(low<=high){
+            mid= low + (high-low)/2;    //写法很重要，不然一直会提示超限
+            if(isBadVersion(mid))
+                high = mid-1;
+            else 
+                low = mid+1;
+        }
+        return low;         
+    }
+};
 
 ### 知识点
+
+

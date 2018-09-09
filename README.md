@@ -33,3 +33,8 @@
      
      
      
+### 参考&&引用
+
+1.[简练的写法，用到STL]https://github.com/soulmachine/leetcode
+2.[底层的思想，适合新手]（https://github.com/weiliu89/leetcode）
+3.[思路分析](https://github.com/pezy/LeetCode)

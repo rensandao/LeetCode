@@ -69,5 +69,5 @@ public:
   [vector::front](http://www.cplusplus.com/reference/vector/vector/front/)
   bigin和end返回的是迭代器，是指针；而front和back则返回的是引用，由于引用没有指定类型，所以在需要考虑类型的情况下有未定义的问题。
 
-* [size_t](http://www.cplusplus.com/reference/cstddef/size_t/?kw=size_t) 无符号整型类型名，类似int等。属于c库里（衰）
+* [size_t](http://www.cplusplus.com/reference/cstddef/size_t/?kw=size_t) 无符号整型类型名，类似int等。属于c库（衰）
 * [报错：reference binding to null pointer of type 'value_type'](https://blog.csdn.net/m0_38088298/article/details/79249044)

@@ -30,7 +30,7 @@ Output: false
 ```
 
 ### 思路
-
+* 
 
 
 
@@ -39,3 +39,9 @@ Output: false
 
 
 ### 知识点
+* 二维数组读取
+* [vector::begin 与 vector::front的区别](https://blog.csdn.net/liangzhaoyang1/article/details/51853686)
+  [vector::front](http://www.cplusplus.com/reference/vector/vector/front/)
+  bigin和end返回的是迭代器，是指针；而front和back则返回的是引用，由于引用没有指定类型，所以在需要考虑类型的情况下有未定义的问题。
+
+

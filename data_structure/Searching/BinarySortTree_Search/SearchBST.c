@@ -26,5 +26,4 @@ Status SearchBST(BiTree T, int key, BiTree f, BiTree *p)
     return SearchBST(T->lchild, key, T, p);
   else
     return SearchBST(T->rchild, key, T, p);
-  
 }

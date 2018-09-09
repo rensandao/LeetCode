@@ -22,13 +22,13 @@ Given target = 5, return true.    Given target = 20, return false.
 
 
 ### 思路
-* 利用一维的二分查找的思想解决二维的查找？题目给出两个关键属性，从这两个属性考虑。
+* (1)180909 利用一维的二分查找的思想解决二维的查找？题目给出两个关键属性，从这两个属性考虑。
   考虑行与列的条件限制，在每一行执行二分查找。
-
+* (2) hard code,调用。
 
 
 ### 代码
-1. 96ms,O(m * logn)
+1. 参考discussion 96ms,O(m * logn)
 ```
 class Solution {
 public:
@@ -53,5 +53,12 @@ public:
     }
 };
 ```
+2. 自己角度
+
+
+
+
 
 ### 知识点
+
+

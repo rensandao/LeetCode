@@ -23,6 +23,7 @@ Given target = 5, return true.    Given target = 20, return false.
 
 ### 思路
 * 利用一维的二分查找的思想解决二维的查找？题目给出两个关键属性，从这两个属性考虑。
+  考虑行与列的条件限制，在每一行执行二分查找。
 
 
 

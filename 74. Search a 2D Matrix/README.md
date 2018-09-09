@@ -43,7 +43,7 @@ public:
         if(matrix.size()<=0) return false;  // 语句判断要放在最前面，不然会报错：
         const size_t m = matrix.size();
         const size_t n = matrix.front().size();
-        //if(matrix.size()<=0) return false;   //放在这一行就会报错：reference binding to null pointer of type 'value_type'
+        //if(matrix.size()<=0) return false; //报错：reference binding to null pointer of type 'value_type'
         
         int low =0, high =m*n, mid;
         while(low<high){

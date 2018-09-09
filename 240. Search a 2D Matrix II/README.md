@@ -28,7 +28,7 @@ Given target = 5, return true.    Given target = 20, return false.
 
 
 ### 代码
-1. 
+1. 96ms,O(m * logn)
 ```
 class Solution {
 public:
@@ -37,12 +37,9 @@ public:
         const size_t row = matrix.size();
         const size_t col = matrix.front().size();
         
-        
         int i=0;
         while(i<row && target>=matrix[i][0]){
-            
             int low=0, high=col,mid,value;
-            
             while(low<high){
                 mid = low+(high-low)/2;
                 value = matrix[i][mid];
@@ -54,11 +51,7 @@ public:
         }
         return false;
     }
-    
 };
-
-
-
 ```
 
 ### 知识点

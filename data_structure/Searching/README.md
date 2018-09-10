@@ -4,5 +4,5 @@
 
 
 ### 资料
-[二分查找分析](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/)
+[二分查找算法分析](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/)
 

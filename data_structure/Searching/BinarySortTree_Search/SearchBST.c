@@ -12,9 +12,9 @@ typedef struct BiTNode
 */
 Status SearchBST(BiTree T, int key, BiTree f, BiTree *p)
 {
-  if(!T)    /*若为空，则不查找*/
+  if(!T)    /*若结点为叶子结点，则查找停止*/
   {
-    *p=f;
+    *p=f;  //指针指向查找路径上访问的最后一个结点
     return FALSE;
   }
   else if (key== T->data)

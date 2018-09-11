@@ -107,13 +107,13 @@ Status InsertAVL(BiTree *T,int e,Status *taller)
       }
       if(e< (*T)->data)  //小于结点数据则在T的左子树进行搜索；
        {
-        if(!InsertAVL(&(*T)->lchild,e,taller))   //未插入
+        if(!InsertAVL(&(*T)->lchild,e,taller))   //未插入   递归操作
           return FALSE;
        }
-         if(*taller)   //已经插入左子树中。再判断
+         if(*taller)   //已经插入左子树中。
          {
-          switch((*T)->bf)   
-          {
+          switch((*T)->bf)   //再检查T的平衡度，自动更新？？
+          {                  //判断插入前原来的左右子树的深度比较，根据平衡度做对应的平衡处理
             case LH:
               LeftBalance(T);
               *taller=FALSE;

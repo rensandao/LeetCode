@@ -107,7 +107,7 @@ Status InsertAVL(BiTree *T,int e,Status *taller)
       }
       if(e< (*T)->data)  //小于结点数据则在T的左子树进行搜索；
        {
-        if(!InsertAVL(&(*T)->lchild,e,taller))   //未插入   递归操作
+        if(!InsertAVL(&(*T)->lchild,e,taller))   //未插入递归调用直到找到返回FALSE，否则说明插入了结点！哪一步？
           return FALSE;
        }
          if(*taller)   //已经插入左子树中。

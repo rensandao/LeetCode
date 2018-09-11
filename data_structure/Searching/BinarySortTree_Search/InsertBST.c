@@ -2,6 +2,11 @@
 /* 
 前提：二叉排序树T中不存在关键字等于key的数据元素时，插入key并返回TRUE,否则返回FALSE.
 */
+typedef struct BiTNode
+{
+  int data;
+  struct BiTNode *lchild, *rchild; //左右孩子指针;
+} BiTNode, *BiTree;
 
 Status InsertBST(BiTree *T, int key)
 {

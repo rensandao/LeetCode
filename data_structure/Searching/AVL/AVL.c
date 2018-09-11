@@ -1,5 +1,7 @@
+/*****step1. 构建存储结构。******/
+
 /*
-1. AVL二叉树的二叉链表结点结构定义
+AVL二叉树的二叉链表结点结构定义
 */
 typedef struct BiTNode
 {
@@ -8,8 +10,9 @@ typedef struct BiTNode
   struct BiTNode *lchild, *rchild;   
 }BiTNode, *BiTree;
 
+/*****step2. 左右旋转操作功能******/
 /*
-2. 右旋操作 
+step2. 右旋操作 
 p为根的二叉树右旋处理，
 */
 void R_Rotate(BiTree *P)
@@ -22,7 +25,7 @@ void R_Rotate(BiTree *P)
 }
 
 /*
-3. 左旋动作
+ 左旋操作
 */
 void L_Rotate(BiTree *P)
 {
@@ -33,8 +36,9 @@ void L_Rotate(BiTree *P)
   *P=R;
 }
 
+/*****step3. 左右旋转的分类情况******/
 /*
-4.左平衡旋转处理
+左平衡旋转处理
 */
 #define LH +1  //左侧深度高
 #define EH 0
@@ -73,6 +77,95 @@ void LeftBalance(BiTree *T)  //指针T指向结点为根
       R_Rotate(T);  
   }
 }
+
+/*右平衡旋转情况*/
+
+
+
+/*****step4 主函数：
+    （1）查找target,没有则插入结点；
+    （2）判断是否仍平衡二叉树，不是则执行左或右子树旋转操作
+    （3）返回结果；
+******/
+Status InsertAVL(BiTree *T,int e,Status *taller)
+{
+  if(!*T)  //表示空树或叶子结点
+  {
+    /*加入taller，表示插入新结点，树长高*/
+    *T =(BiTree)malloc(sizeof(BiTNode));
+    (*T)->data=e;
+    (*T)-lchild=(*T)->rchild =NULL;
+    (*T)->bf=EH;
+    *taller =TRUE;
+    }
+    else
+    {
+      if(e==(*T)->data; 
+      {
+        *taller = FALSE;
+         return FALSE;
+      }
+      if(e< (*T)->data)  //小于结点数据则在T的左子树进行搜索；
+       {
+        if(!InsertAVL(&(*T)->lchild,e,taller))   //未插入
+          return FALSE;
+       }
+         if(*taller)   //已经插入左子树中。再判断
+         {
+          switch((*T)->bf)   
+          {
+            case LH:
+              LeftBalance(T);
+              *taller=FALSE;
+              break;
+            case EH:
+              (*T)->bf=LH;
+              *taller=TRUE;
+              break;
+            case RH:
+              (*T)->bf=EH;
+              *taller=FALSE;
+              break;
+          }
+         }      
+   }
+   
+   else
+   {
+     if(!InsertAVL(&(*T) ->rchild, e, taller))
+         return FALSE;
+     if(*taller)
+     {
+       switch((*T)->bf)
+       {
+         case LH:
+           (*T)->bf =EH;
+           *taller=FALSE;
+           break;
+         case EH:
+           (*T)->bf =RH;
+           *taller=TRUE;
+           break;
+         case RH:
+           RightBalance(T);
+           *taller=FALSE;
+           break;       
+       } 
+      }
+     }
+  }
+  return TRUE;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

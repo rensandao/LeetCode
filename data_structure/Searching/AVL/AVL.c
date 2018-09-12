@@ -20,8 +20,8 @@ void R_Rotate(BiTree *P)
   BiTree L; 
   L = (*P)->lchild;    // L指向P的左子树
   (*P)->lchild = L->rchild; //L现在的右子树放到P的左子树上
-  L-rchild=(*P);  // P现在放到L的右子树
-  *P=L;     //L放到P之前的位置，完成更新
+  L-rchild=(*P);  // P指的结点，现在放到L的右子树
+  *P=L;     //P指针指向L的位置，完成更新
 }
 
 /*

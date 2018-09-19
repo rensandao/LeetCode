@@ -50,7 +50,7 @@ The median is (2 + 3)/2 = 2.5
       
   
 ### 代码
-  1. 参照Solutuion
+  方法1: 参照Solutuion
   ```
   class Solution {
 public:
@@ -93,10 +93,14 @@ public:
 };
   ```
   
-  2.
+  方法1.1: 对于上述边界问题的代码，简洁性改动(本质上与方法1是一样），但是测试后runtime只有11.7%，68ms。而方法1为36ms。
+            说明虽然代码看着简洁，运行速度却不一定。还是方法1更好些。
   
+  double left_max = (i==0)? nums2[j-1]:(j==0)? nums1[i-1] : max(nums1[i-1],nums2[j-1]);
+  double right_min = (i==m)? nums2[j]:(j==n)? nums1[i] : min(nums1[i], nums2[j]);
+  return (m+n)%2==1? left_max : (left_max + right_min)/2.0; 
 
-
+  方法2： 
 
 ### 知识点
 

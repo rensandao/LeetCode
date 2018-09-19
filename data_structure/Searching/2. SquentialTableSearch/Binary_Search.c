@@ -12,7 +12,7 @@ int Binary_Search(int *a, int n, int key)
     mid=(low+high) /2;
     if(key<a[mid])
       high=mid-1;
-    else if (key>a[min])
+    else if (key>a[mid])
       low =mid+1;
     else
       return mid;   //mid 即为查找到的位置   此处有bug,比如如果出现多个连续相同数据

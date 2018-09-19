@@ -50,7 +50,51 @@ The median is (2 + 3)/2 = 2.5
       
   
 ### 代码
-
+  1. 参照Solutuion
+  ```
+  class Solution {
+public:
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        
+        int m =nums1.size(), n=nums2.size();
+        if(m>n) return findMedianSortedArrays(nums2,nums1);
+        //if(m>n) {swap(nums1, nums2); swap(m, n);}
+        
+        //binary search
+        int low=0,high=m;
+        while(low<=high){   //等号何时加何时不加？
+            
+            int i= (low+high)/2;
+            int j= (m+n+1)/2-i;
+            
+            if(i>0 && nums1[i-1]>nums2[j]){ 
+                high = i-1;
+            }
+            else if(i<m && nums1[i]<nums2[j-1]){
+                low = i+1;
+            }
+            else{                                 //几个边界问题处理
+                double left_max;
+                if(i==0) left_max = nums2[j-1];
+                else if(j==0) left_max = nums1[i-1];
+                else left_max = max(nums1[i-1], nums2[j-1]); 
+                if( (m+n)%2 ) return left_max;
+                
+                double right_min;
+                if(i==m) right_min = nums2[j];
+                else if(j==n) right_min = nums1[i];
+                else right_min = min(nums1[i], nums2[j]);
+                
+                return (left_max + right_min) /2.0;                
+            }                 
+        }
+        return 0.0;       
+    }
+};
+  ```
+  
+  2.
+  
 
 
 

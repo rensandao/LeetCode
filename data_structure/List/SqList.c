@@ -54,7 +54,7 @@ status GetElem(SqList L, int i, ElemType *e)
 
 Status ListInsert(SqList *L, int i, ElemType e) //在L的第i个位置之前插入e，L长度加1
 {
-  if(L->length ==0 || i<1 || i>L.length)   //step1.判断限制条件
+  if(L->length ==0 || i<1 || i>L->length)   //step1.判断限制条件
     return ERROR;
   if(L->length >= MAXSIZE)
     return ERROR;
@@ -68,5 +68,45 @@ Status ListInsert(SqList *L, int i, ElemType e) //在L的第i个位置之前插�
   L->length++;       //step4.更新表长
   return OK;  
 }
+
+/*
+3.删除操作
+
+算法思路（与插入基本相反）：
+1. 检查限制条件：删除位置不合理
+2. 取出删除元素
+3. 从删除位置开始遍历到最后一个元素位置，分别向前移位
+4. 更新表长
+
+初始条件：已知顺序线性表L，i=[1,ListLength(L)]
+操作：删除第i个数据元素，并用e返回其值，L长度减1
+*/
+
+Status ListDelete(SqList *L, int i, ElemType *e)
+{
+  int k;
+  if(L->length==0)        //step1. 判断
+     return ERROR;
+  if(i<1 || i>L->length)
+    return ERROR;
+  *e = L->data[i-1];   // step2. 先保存要删掉的值
+  if(i<L->length)    //若删除的不是最后值
+  {
+   for(k=i+1;k<=L->length;k++)    //step3. 移位
+     L->data[k-1] = L->data[k];   
+  }
+  L->length--;    //step4. 更新表长
+  return OK;
+}
+
+
+
+
+
+
+
+
+
+
 
 

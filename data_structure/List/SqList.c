@@ -1,4 +1,6 @@
-/*
+//线性表
+
+/*  
 0.定义
 线性表的顺序存储结构：
   三个属性：
@@ -41,6 +43,9 @@ status GetElem(SqList L, int i, ElemType *e)
 /*
 2.插入操作
 
+初始条件：线性表L已存在，1<= i <= ListLength(L);
+操作：在L的i位置之前插入新元素；
+
 思路：
 * 从最后一个位置开始向前遍历到第i个位置，分别将他们都向后移动一个位置；再插入元素；表长加1。
 * 考虑限制问题：插入位置不合理；线性表长度大于数组长度；
@@ -49,16 +54,18 @@ status GetElem(SqList L, int i, ElemType *e)
 
 Status ListInsert(SqList *L, int i, ElemType e) //在L的第i个位置之前插入e，L长度加1
 {
-  if(L->length ==0 || i<1 || i>L.length)
+  if(L->length ==0 || i<1 || i>L.length)   //step1.判断限制条件
     return ERROR;
-  
-  
-  
-  
-  
-  
-  L->data[i-1] = e;
-  L->length++;
+  if(L->length >= MAXSIZE)
+    return ERROR;
+  if(i<=L->length)  // 位置不在表尾   step2. 移位存好已有数据
+  {
+    for(int j=L->length;j>=i-1;j--)   //将插入位置i后面所有的数据都向后移一位保存
+        L->data[j+1] = L->data[j];    //如果从前面存的话，就会导致数据丢失。这种方式只能从最后空位存
+  }                                   //插入i位置之前，即数组i-1之前。那么i-1之后的数据后移，所以递归条件j>=i-1;
+    
+  L->data[i-1] = e;  //step3.存入新数据
+  L->length++;       //step4.更新表长
   return OK;  
 }
 

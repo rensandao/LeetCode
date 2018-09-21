@@ -109,7 +109,7 @@ void CreateListTail(LinkList *L, int n)
     p->data = rand()%100 +1;
     r->next = p;
     
-    r=p;   // 这是本方法的窍门之处。2点结点，p用来设定与串接，r用来标记
+    r=p;   // 这是本方法的窍门之处。用2个结点，p用来设定与串接，r用来标记
   }
   
   r->next = NULL;        //最后才把NULL设定完。

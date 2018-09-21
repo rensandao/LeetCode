@@ -1,7 +1,7 @@
 ### 线性表
 ****
 
-1 线性表的定义
+1 [线性表的定义](https://blog.csdn.net/sinat_20265495/article/details/52716710)
 
 2 线性表的基本操作(pseudo code)
 

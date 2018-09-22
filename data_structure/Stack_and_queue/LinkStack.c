@@ -21,11 +21,11 @@ typedef struct LinkStack    //栈的栈顶指针+栈长度
 */
 Status Push(LinkStack *S, ElemType e)
 {
-  LinkStackPtr p = (LinkStackPtr)malloc(sizeof(StackNode));  
+  LinkStackPtr p = (LinkStackPtr)malloc(sizeof(StackNode));  //创建新结点，分配空间
   p->data = e;
-  p->next = S->top;      //过渡结点，与单链表类似，因为要保存数据和地址，所以要分配空间给p节点
+  p->next = S->top;      
   
-  S->top =p;    //栈操作
+  S->top =p;    //更新栈操作
   S->count++;
   
   return OK;

@@ -11,7 +11,16 @@
   FIFO（先进后出结构）
  
 ```
+2.ADT
 
+  * InitStack(*S)
+  * DestroyStack(*S)
+  * ClearStack(*S)
+  * StackEmpty(S)   //需要修改表的传指针*S，不需要的传值S
+  * GetTop(S,*e)
+  * Push(*S,e)
+  * Pop(*S,*e)
+  * StackLength(S)
 
 
 #### 队列

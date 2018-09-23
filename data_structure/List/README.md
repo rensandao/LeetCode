@@ -1,8 +1,10 @@
 ### 线性表
 ****
 
-1 [线性表的定义](https://blog.csdn.net/sinat_20265495/article/details/52716710)
-
+1 线性表的定义
+  
+  线性表：零个和多个数据元素的有限序列。
+  
 2 线性表的基本操作(pseudo code)
 
   * InitList(*L) 初始化操作
@@ -51,6 +53,7 @@
 
 
 6 单链表的读取
+  [单链表定义](https://blog.csdn.net/sinat_20265495/article/details/52716710)
 
 7 单链表的插入与删除
 ```

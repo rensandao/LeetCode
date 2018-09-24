@@ -7,3 +7,4 @@
 4. [线性表](https://github.com/rensandao/LeetCode/tree/master/data_structure/List)180921
 5. [栈与队列](https://github.com/rensandao/LeetCode/tree/master/data_structure/Stack_and_queue)180922
 6. [串](https://github.com/rensandao/LeetCode/tree/master/data_structure/String)180923
+7. [排序](https://github.com/rensandao/LeetCode/tree/master/data_structure/Sort)180924

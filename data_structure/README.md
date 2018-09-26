@@ -8,3 +8,7 @@
 5. [栈与队列](https://github.com/rensandao/LeetCode/tree/master/data_structure/Stack_and_queue)180922
 6. [串](https://github.com/rensandao/LeetCode/tree/master/data_structure/String)180923
 7. [排序](https://github.com/rensandao/LeetCode/tree/master/data_structure/Sort)180924
+
+
+Reference
+1. 此部分为学习《大话数据结构》过程中，代码练习和注释总结。

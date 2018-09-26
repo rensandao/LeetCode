@@ -1,14 +1,25 @@
-// 线性表的单链表存储结构
+#include"stdio.h"
 
+#define OK 1
+#define ERROR 0
+#define TRUE 1
+#define FALSE 0
+#define MAXSIZE 20
+
+typedef int ElemType;
+typedef int Status;
+
+
+// 线性表的单链表存储结构
 typedef struct Node
 {
   ElemType data;
   struct Node *next;
 }Node;
-typedef struct Node *LinkList; 
+typedef struct Node *LinkList;  //或直接写在上述定义后面。Node表示一般结构体型结点，*LinkList表示指向结构体型结点的指针。
 
-// 单链表的读取（2种表示）
-Status GetElem(LinkList L, int i, ElemType *e)
+// 单链表的读取（第1种表示），最坏时间复杂度O(n)
+Status GetElem(LinkList L, int i, ElemType *e)  //
 {
   int j;
   LinkList p;
@@ -27,7 +38,7 @@ Status GetElem(LinkList L, int i, ElemType *e)
   
 }
 
-
+//单链表的读取（第2种表示）
 Node* GetElem(LinkList L, int i)
 {
     int j;

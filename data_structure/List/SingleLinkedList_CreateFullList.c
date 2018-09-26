@@ -86,9 +86,7 @@ Status CreateListTail(Linklist *L, int n)
     }
     
   }
-  
-  (*L)->length ++;
-  
+     
   return OK;  
 }
 
@@ -101,7 +99,7 @@ void CreateListTail(LinkList *L, int n)
   srand(time(0));
   *L = (LinkList)malloc(sizeof(Node));
   
-  r = *L;   //r此时就是指向尾部的结点。但NULL还并没有设置。
+  r = *L;   //r此时指向头结点。但NULL还并没有设置。
   
   for(i=0;i<n;i++)
   {
@@ -109,29 +107,10 @@ void CreateListTail(LinkList *L, int n)
     p->data = rand()%100 +1;
     r->next = p;
     
-    r=p;   // 这是本方法的窍门之处。用2个结点，p用来设定与串接，r用来标记
+    r=p;   // 这是本方法的窍门之处。用2个结点，r串接p之后，在替代为p，p再更新，如此直到循环结束。
   }
   
   r->next = NULL;        //最后才把NULL设定完。
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

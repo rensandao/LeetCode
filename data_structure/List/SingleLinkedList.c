@@ -156,7 +156,7 @@ Status ListDelete(LinkList *L, int i, ElemType *e)
   LinkList p,q;
   p = *L;
   j=1;
-  if(j<i)
+  if(j<i)   //while(p->next && j<i)
   {
     p = p->next;   //i-1位置结点
     j++;
@@ -177,14 +177,14 @@ int main()
 {
   LinkList L;
   Status i;
-  
+  ElemType e;
   //初始化
   i= InitList(&L);
   printf("链表L初始OK,ListLength(L)=%d\n", ListLength(L));
 
-  int j,k;
+  int j,k,pos;
   char opp;
-  printf("\n1.遍历操作 \n2.插入操作  \n0.退出 \n请选择你的操作：\n");
+  printf("\n1.遍历操作 \n2.插入操作 \n3.删除  \n0.退出 \n请选择你的操作：\n");
     while(opp != '0'){
         scanf("%c",&opp);
         switch(opp){
@@ -203,7 +203,14 @@ int main()
                 ListTraverse(L);
                 printf("\n");
                 break;
-
+            case '3':
+                printf("删除第几个？");
+                scanf("%d",&pos)
+                ListDelete(&L,pos,&e);
+                ListTraverse(L);
+                printf("\n");
+                break;
+     
             case '0':
                 exit(0);
         }

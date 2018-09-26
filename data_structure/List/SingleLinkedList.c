@@ -18,6 +18,32 @@ typedef struct Node
 }Node;
 typedef struct Node *LinkList;  //或直接写在上述定义后面。Node表示一般结构体型结点，*LinkList表示指向结构体型结点的指针。
 
+//单链表的初始化
+Status InitList(LinkList *L)    //对链表改动用指针，输入地址
+{
+  *L = (LinkList)malloc(sizeof(Node));  //*L即指针L所指一段内存，内存通过malloc来分配。这一段经过初始化后就是结构体型结点。也是头结点（*L）。
+                                        //  指针L就是头指针了，(*L)-next就是首元结点(真正的第一个结点）。
+  if(!(*L))                   // 由于上述malloc存在分配失败可能，这里应加上判断条件。*L不为空。
+    return ERROR;
+  
+  (*L)->next = NULL;   
+  
+  return OK;
+}
+
+int ListLength(LinkList L)   // 不用指针
+{
+  int i=0;
+  LinkList p = L->next;  //p指向第一个结点
+  while(p)
+  {
+    i++;
+    p=p->next;
+  }
+  return i;
+}
+
+
 // 单链表的读取（第1种表示），最坏时间复杂度O(n)
 Status GetElem(LinkList L, int i, ElemType *e)  //
 {
@@ -137,6 +163,16 @@ Status ListDelete(LinkList *L, int i, ElemType *e)
 }
 
 
+int main()
+{
+  LinkList L;
+  Status i;
+  
+  i= InitList(&L);
+  print("链表L初始OK,ListLength(L)=%d\n", L->
+
+
+}
 
 
 

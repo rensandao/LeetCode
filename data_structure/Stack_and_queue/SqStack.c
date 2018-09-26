@@ -10,7 +10,7 @@ typedef struct
 
 Status Push(SqStack *S, ElemType e)
 {
-  if(*S->top == MAXSIZE-1)   //????? S or *S
+  if(S->top == MAXSIZE-1)   //
     return ERROR;
     
   S->top++;      // 栈顶指针？加1

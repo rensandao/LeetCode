@@ -95,8 +95,6 @@ Node* GetElem(LinkList L, int i)
   step2.遍历链表，直至第i-1个
   step3.元素赋值
   step4.链表指针更换
-  
-
 */
 Status ListInsert(LinkList *L,int i, ElemType e)
 {
@@ -104,7 +102,7 @@ Status ListInsert(LinkList *L,int i, ElemType e)
   LinkList p,s;
   p = *L;
   j = 1;
-  if(j<i)
+  while(p && j<i)
   {
     p = p->next; //最终p为第i-1位置结点
     j++;
@@ -113,15 +111,28 @@ Status ListInsert(LinkList *L,int i, ElemType e)
     return ERROR;
   
   //生成空结点
-  s = (LinkList)malloc(sizeof(Node));  //
+  s = (LinkList)malloc(sizeof(Node));  // LinkList 强制转换(malloc返回 void *),分配结点类型数据所需大小的字节数。
   
   s.data = e;
   s.next = p->next;  //第i位置结点
   p->next = s;
-  L->length ++;
-  return OK; 
   
+  return OK; 
 }
+
+//依次输出L中的每一个数据元素
+Status ListTraverse(LinkList L)
+{
+  LinkList p=L->next;
+  while(p)
+  {
+    print("->%d", p->data);   
+    p= p->next;
+  }
+  printf("\n");
+  return OK;
+}
+
 
 //删除
 /*
@@ -139,7 +150,6 @@ Status ListInsert(LinkList *L,int i, ElemType e)
   step5.释放q结点。
   
 */
-
 Status ListDelete(LinkList *L, int i, ElemType *e)
 {
   int j;
@@ -168,16 +178,35 @@ int main()
   LinkList L;
   Status i;
   
+  //初始化
   i= InitList(&L);
-  print("链表L初始OK,ListLength(L)=%d\n", L->
+  printf("链表L初始OK,ListLength(L)=%d\n", ListLength(L));
 
+  int j,k;
+  char opp;
+  printf("\n1.遍历操作 \n2.插入操作  \n0.退出 \n请选择你的操作：\n");
+    while(opp != '0'){
+        scanf("%c",&opp);
+        switch(opp){
+            case '1':
+                ListTraverse(L);
+                printf("\n");
+                break;
 
+            case '2':
+                srand((unsigned)time(NULL));
+                for(j=1;j<=10;j++)
+                {
+                    i=ListInsert(&L,1,rand()%100);
+                }
+                printf("在L的表头依次插入10个随机数后：");
+                ListTraverse(L);
+                printf("\n");
+                break;
+
+            case '0':
+                exit(0);
+        }
+    }
 }
-
-
-
-
-
-
-
 

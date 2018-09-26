@@ -19,6 +19,14 @@ Status Push(SqStack *S, ElemType e)
   return OK;
 }
 
+//构造空栈
+Status InitStack(SqStack *S)
+{
+  S->top =-1;
+  return OK;
+}
+
+
 /*
 栈的顺序存储结构——出栈操作pop
 */

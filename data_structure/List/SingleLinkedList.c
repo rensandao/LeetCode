@@ -1,4 +1,5 @@
 #include"stdio.h"
+#include"stdlib.h" //或者#include"alloc.h" 或 #include"malloc.h" 都可以，malloc的头文件
 
 #define OK 1
 #define ERROR 0

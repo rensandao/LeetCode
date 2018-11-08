@@ -15,8 +15,10 @@ Output: [1,2,3]
 ```
 
 ### 思路
-1. 考察二叉树遍历：先根遍历。基本技能：熟悉树和栈的ADT.
-   
+考察二叉树遍历：先根遍历。基本技能：熟悉树和栈的ADT.
+* recursive 
+* Iterative using stack
+* Morris traversal
 
 
 ### 代码

@@ -17,10 +17,12 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 ```
 
 ### 思路
-考察二叉树遍历：先根遍历。基本技能：熟悉树和栈的ADT.
-* recursive solution
-* Iterative solution using stack
-* Morris traversal
+* 递归解法
+
+* 迭代解法（使用栈）
+  
+
+* Morris遍历
 
 
 ### 代码
@@ -36,7 +38,7 @@ public:
         For preorder, we wish to print the sort result from the root to left tree, 
         and the right tree last.
         So with stack, we can push right child pointer first and then left one. When
-        poping, left goes first and then the right. The problem sovled.    
+        poping, left goes first and then the right. The problem solved.    
         */
         
         stack<const TreeNode*> stack;
@@ -58,8 +60,8 @@ public:
 ```
 
 
-
-
-
 ### 知识点
-* 二叉树的遍历
+* 熟悉树和栈的定义、性质、作用和ADT等.
+* 树的遍历：广度优先（BFS）和深度优先(DFS)
+* 二叉树的遍历：前中后序
+* 结构体指针

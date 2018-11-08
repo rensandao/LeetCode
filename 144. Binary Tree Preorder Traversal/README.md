@@ -18,6 +18,8 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 ### 思路
 
+181108 
+
 考察二叉树的遍历问题。首先要对树和二叉树的概念要了解。其次对于树的抽象数据类型要知道怎么代码实现，比如树的存储结构问题。
 
 
@@ -30,7 +32,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 
 ### 代码
-* 使用栈进行迭代
+* 使用栈进行迭代 181108
 ```
 class Solution {
 public:

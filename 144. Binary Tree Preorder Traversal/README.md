@@ -24,6 +24,42 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 
 ### 代码
+* 使用栈进行迭代
+```
+class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root){
+        /*
+        iterative solution using stack method.
+        The function of stack is store the pointer value temporarily,
+        and deal with left and right child tree order.
+        For preorder, we wish to print the sort result from the root to left tree, 
+        and the right tree last.
+        So with stack, we can push right child pointer first and then left one. When
+        poping, left goes first and then the right. The problem sovled.    
+        */
+        
+        stack<const TreeNode*> stack;
+        vector<int> result;
+        /* if(root != NULL)   空指针是什么的？NULL表示法 null? */
+        if(root) stack.push(root); 
+
+        while(!stack.empty()){
+            const TreeNode* temp = stack.top();
+            stack.pop();
+            result.push_back(temp->val);
+
+            if(temp->right)  stack.push(temp->right);
+            if(temp->left)   stack.push(temp->left);
+        }	
+        return result;
+    }
+};
+```
+
+
+
+
 
 ### 知识点
 * 二叉树的遍历

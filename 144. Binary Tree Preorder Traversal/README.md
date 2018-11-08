@@ -18,8 +18,8 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 ### 思路
 考察二叉树遍历：先根遍历。基本技能：熟悉树和栈的ADT.
-* recursive 
-* Iterative using stack
+* recursive solution
+* Iterative solution using stack
 * Morris traversal
 
 

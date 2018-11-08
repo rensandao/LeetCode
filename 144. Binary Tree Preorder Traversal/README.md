@@ -30,7 +30,7 @@ class Solution {
 public:
     vector<int> preorderTraversal(TreeNode* root){
         /*
-        iterative solution using stack method.
+        Iterative solution using stack method.
         The function of stack is store the pointer value temporarily,
         and deal with left and right child tree order.
         For preorder, we wish to print the sort result from the root to left tree, 

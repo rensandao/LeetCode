@@ -31,6 +31,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 * Morris遍历
 
 
+
 ### 代码
 * 使用栈进行迭代 181108
 ```
@@ -64,6 +65,13 @@ public:
     }
 };
 ```
+
+* Morris遍历
+
+
+
+
+
 
 
 ### 知识点

@@ -38,6 +38,6 @@
 
 * 高级参考：[简练干净高效，用到STL](https://github.com/soulmachine/leetcode)
 
-* 主要类比：[底层的思想，适合新手](https://github.com/weiliu89/leetcode)
+* 主要类比：[底层的思想，适合新手](https://github.com/haoel/leetcode)
 
 * 偶尔：[思路分析](https://github.com/pezy/LeetCode)

@@ -30,7 +30,8 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
   
 
 * Morris遍历
-
+   
+   Morris实现的机理类似于线索二叉树。
 
 
 ### 代码

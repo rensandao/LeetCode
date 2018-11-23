@@ -94,6 +94,7 @@ void preorderMorrisTraversal(TreeNode *root) {
             }
             else
             {
+                //表明之前已经线索化了。
                 prev->right = NULL;
                 cur = cur->right;
             }

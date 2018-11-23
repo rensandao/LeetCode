@@ -69,7 +69,37 @@ public:
 ```
 
 * Morris遍历
+`
+void preorderMorrisTraversal(TreeNode *root) {
+    TreeNode *cur = root, *prev = NULL;
+    while (cur != NULL)
+    {
+        if (cur->left == NULL)
+        {
+            printf("%d ", cur->val);
+            cur = cur->right;
+        }
+        else
+        {
+            prev = cur->left;
+            while (prev->right != NULL && prev->right != cur)
+                prev = prev->right;
 
+            if (prev->right == NULL)
+            {
+                printf("%d ", cur->val);  // the only difference with inorder-traversal
+                prev->right = cur;
+                cur = cur->left;
+            }
+            else
+            {
+                prev->right = NULL;
+                cur = cur->right;
+            }
+        }
+    }
+}
+`
 
 
 

@@ -69,7 +69,8 @@ public:
 ```
 
 * Morris遍历
-`
+
+```
 void preorderMorrisTraversal(TreeNode *root) {
     TreeNode *cur = root, *prev = NULL;
     while (cur != NULL)
@@ -99,7 +100,7 @@ void preorderMorrisTraversal(TreeNode *root) {
         }
     }
 }
-`
+```
 
 
 

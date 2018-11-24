@@ -71,41 +71,41 @@ public:
 * Morris遍历181123
 
 ```
-void preorderMorrisTraversal(TreeNode *root) {
-    TreeNode *cur = root, *prev = NULL;
-    while (cur != NULL)
-    {
-        if (cur->left == NULL)
-        {
-            printf("%d ", cur->val);
-            cur = cur->right;
-        }
-        else
-        {
-            prev = cur->left;
-            while (prev->right != NULL && prev->right != cur)
-                prev = prev->right;
-
-            if (prev->right == NULL)
-            {
-                printf("%d ", cur->val);  // the only difference with inorder-traversal
-                prev->right = cur;
-                cur = cur->left;
+class Solution {
+public:
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> result;
+        TreeNode *cur_node = root, *prev_node;
+        
+        while(cur_node != NULL){
+            if(cur_node->left == NULL){
+                result.push_back(cur_node->val);
+                cur_node = cur_node->right;                
             }
-            else
-            {
-                //表明之前已经线索化了。
-                prev->right = NULL;
-                cur = cur->right;
+            else{
+                //寻找cur_node的前驱结点
+                prev_node = cur_node->left;
+                while(prev_node->right != NULL && prev_node->right != cur_node)
+                    prev_node = prev_node->right;
+                
+                if(prev_node->right == NULL){
+                    result.push_back(cur_node->val);
+                    prev_node->right = cur_node;
+                    cur_node = cur_node->left;                    
+                }
+                //表示prev_node->right == cur_node;
+                else{
+                    //表明之前已经生成线索,则删除线索
+                    //result.push_back(cur_node->val);
+                    prev_node->right = NULL; // 如果不设置为NULL，则循环不能继续
+                    cur_node = cur_node->right;                                      
+                }                   
             }
-        }
+        }  
+        return result;
     }
-}
+};
 ```
-
-
-
-
 
 
 ### 知识点

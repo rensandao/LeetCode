@@ -5,7 +5,7 @@
 
 要理解树的存储结构的不同方法逻辑性，知道不同表示法的优缺点问题。
 
-[博文链接](https://www.cnblogs.com/rensandao/p/9925310.html)
+[关于树的定义与存储结构](https://www.cnblogs.com/rensandao/p/9925310.html)
 
 ### *2* 二叉树
 * 熟记二叉树的5条性质，尤其第4条的推导

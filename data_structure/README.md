@@ -10,9 +10,11 @@
 7. [第九章 排序](https://github.com/rensandao/LeetCode/tree/master/data_structure/Sort)180924
 
 
-Reference
+#### Reference
 1. 此部分为学习《大话数据结构》过程中，代码练习和注释总结。
 
-Log
-180905 建立
+#### Log
+
+180905 创建repo
+
 181207 修改各章节结构及标题标号等，便于记忆。

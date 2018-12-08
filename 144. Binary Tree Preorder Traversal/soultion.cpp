@@ -7,10 +7,11 @@ Date: 2018-12-08
 Reference:
 https://github.com/haoel/leetcode/blob/master/algorithms/cpp/binaryTreePreorderTraversal/binaryTreePreorderTraversal.cpp
 ****************************************************************/ 
+
 #include<stdio.h>
-#include<stdlib.h> /* c libray: malloc, free, rand,*/
+#include<stdlib.h> /* recommend c++ writing format. libray: malloc, free, rand,*/
 #include<iostream>
-#include<stack>  /* c++ container: stack*/
+#include<stack>
 #include<vector>
 
 using namespace std; /**/

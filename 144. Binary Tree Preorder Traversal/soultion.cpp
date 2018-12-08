@@ -37,7 +37,7 @@ vector<int> preorderTraversal(TreeNode* root){
   stack<const TreeNode*> stack;
 	vector<int> result;
 	
-	/* if(root != NULL)   空指针是什么的？NULL表示法 null? */
+	// or use if(root != NULL) 
 	if(root) stack.push(root); 
 	
 	while(!stack.empty()){
@@ -84,7 +84,7 @@ void printTree(TreeNode* root){
 
 //print result of vector
 void printVec(vector<int> v){
-	cout<< "先序遍历法，vector输出：" << endl; 
+	cout<< "The result of preorder traversal: " << endl; 
 	for(int i=0; i<v.size(); i++){
 		cout << v[i] << " ";
 	}
@@ -100,11 +100,11 @@ int main(){
 		4. print the result
 	*/
 
-	cout<<"请输入二叉树结点数据int型：" << endl; 
+	cout<<"please input Binary tree nodes' datas：" << endl; 
 	TreeNode* root1 = CreateBiTree();
 	
 	/*print tree*/
-	cout << "打印结点值:" <<endl; 
+	cout << "print nodes:" <<endl; 
 	printTree(root1);
 	//preorder Traversal
 	cout<< endl; 

@@ -95,7 +95,8 @@ void printVec(vector<int> v){
 
 int main(){
 	
-	/*  1. construct binary tree 
+	/*  
+		1. construct binary tree 
 		2. print binary tree datas
 		3. preorder traversal
 		4. print the result

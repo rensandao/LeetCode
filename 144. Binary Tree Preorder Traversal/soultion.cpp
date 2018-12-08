@@ -13,8 +13,7 @@ https://github.com/haoel/leetcode/blob/master/algorithms/cpp/binaryTreePreorderT
 #include<iostream>
 #include<stack>
 #include<vector>
-
-using namespace std; /**/
+using namespace std;
 
 typedef int ElemType;
 

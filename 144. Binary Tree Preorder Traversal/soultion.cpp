@@ -9,7 +9,7 @@ https://github.com/haoel/leetcode/blob/master/algorithms/cpp/binaryTreePreorderT
 ****************************************************************/ 
 
 #include<stdio.h>
-#include<stdlib.h> /* recommend c++ writing format. libray: malloc, free, rand,*/
+#include<stdlib.h> // recommend c++ writing format. libray: malloc, free, rand，etc
 #include<iostream>
 #include<stack>
 #include<vector>

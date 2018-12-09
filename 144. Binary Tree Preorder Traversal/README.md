@@ -122,7 +122,7 @@ public:
         
         stack<const TreeNode*> stack;
         vector<int> result;
-        /* if(root != NULL)   空指针是什么的？NULL表示法 null? */
+        /* if(root != NULL)   NULL表示法 null? */
         if(root) stack.push(root); 
 
         while(!stack.empty()){

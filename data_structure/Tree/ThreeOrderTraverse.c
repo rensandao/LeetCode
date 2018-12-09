@@ -1,4 +1,5 @@
 /*二叉树的前序遍历递归算法*/
+//下述的代码，遍历输出只能以printf()形式输出，如果要在c++中存放在vector中，则需要定义全局变量vector变量。再调用vector元素输出函数。
 void PreOrderTraverse(BiTree T)
 {
   if(T==NULL)

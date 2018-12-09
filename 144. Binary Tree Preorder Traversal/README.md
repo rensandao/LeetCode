@@ -76,7 +76,10 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 	
 	1) 栈的一个性质是先进后出FILO，这个性质可以用来处理顺序的问题。有时候挺巧妙。
 	
-	2）标准库中栈的类<stack>,类成员函数之一std::stack::top，是指向栈顶元素的指针。实际上top()是调用底层容器的back函数返回值，即指针。 
+	2）标准库中栈的类<stack>,类成员函数之一std::stack::top，是指向栈顶元素的指针。实际上top()是调用底层容器的
+	
+	back函数返回值，即指针。 
+	
 					   
 	若采用栈的话，那么第一点是利用栈的FILO实现二叉树的先中后序的顺序问题；第二，压入或者弹出的数据是结点的指针。
 	

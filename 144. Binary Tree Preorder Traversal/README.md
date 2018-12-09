@@ -85,11 +85,11 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 	
 	因为本身树的结构定义了各结点通过指针来关联。关键在算法的逻辑怎么组织了。   
 
-			 1
-			/ \
-		   2  5    
-		  /\ 	
-		 3 4
+         1
+        / \
+       2  5    
+      /\ 	
+     3 4
 
 	先序算法：
 	

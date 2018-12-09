@@ -35,7 +35,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 
 181209
 
-1. 树的遍历是怎么样的？可以图示演绎。
+1.树的遍历是怎么样的？可以图示演绎。
 
 答: 遍历的定义是什么? 百度百科：所谓遍历，是指沿着某条搜索路线，依次对树中每个结点均做一次且仅做一次访问。
 

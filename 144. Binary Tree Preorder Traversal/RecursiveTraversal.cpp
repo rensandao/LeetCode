@@ -12,7 +12,6 @@
 #include<iostream>
 #include<stack>  /* c++ container: stack*/
 #include<vector>
-
 using namespace std; /**/
 
 typedef int ElemType;
@@ -23,8 +22,6 @@ struct TreeNode{
 	TreeNode* right;
 	TreeNode(size_t x): val(x), left(NULL), right(NULL){}	//initialization
 };
-
-
 
 vector<int> res; 
 //recursive traversal
@@ -101,7 +98,6 @@ void printVec(vector<int> v){
 	}
 	cout << endl;
 }
-
 
 int main(){
 	

@@ -57,6 +57,7 @@ vector<int> RecursiveTraversal(TreeNode *root){  //默认叶子结点左右孩�
 		if(root->left) RecursiveTraversal(root->left);
 		if(root->right) RecursiveTraversal(root->right);			 	
 	} 
+	
 	return res;
 } 
 

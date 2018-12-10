@@ -85,10 +85,10 @@
 
 * 181209 
 
-间隔实际较长，重新熟悉并理顺二叉树的创建，以及先序遍历递归->用栈实现的思路，并做了[*思路记录*](https://github.com/rensandao/LeetCode/tree/master/144.%20Binary%20Tree%20Preorder%20Traversal)。
+  间隔实际较长，重新熟悉并理顺二叉树的创建，以及先序遍历递归->用栈实现的思路，并做了[*思路记录*](https://github.com/rensandao/LeetCode/tree/master/144.%20Binary%20Tree%20Preorder%20Traversal)。
 	
 * 181219
 
-094中序遍历 用栈
+  第094中序遍历 用栈
 
 

@@ -5,6 +5,8 @@ Date: 2018-12-08
 
 Code format and structure reference: 
 https://github.com/pezy/LeetCode/blob/master/093.%20Binary%20Tree%20Inorder%20Traversal/solution.h
+Algorithm reference:
+PDF-> https://github.com/soulmachine/leetcode 
 ****************************************************************/
 
 #include<vector>

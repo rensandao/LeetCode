@@ -34,20 +34,20 @@ vector<int> preorderTraversal(TreeNode* root){
 	So with stack, we can push right child pointer first and then left one. When
 	poping, left goes first and then the right. The problem sovled.    */
 	
-  stack<const TreeNode*> stack;
-	vector<int> result;
+    stack<const TreeNode*> stack;
+    vector<int> result;
 	
-	// or use if(root != NULL) 
-	if(root) stack.push(root); 
-	
-	while(!stack.empty()){
-		const TreeNode* temp = stack.top();
-		stack.pop();
-		result.push_back(temp->val);
-		
-		if(temp->right)  stack.push(temp->right);
-		if(temp->left)   stack.push(temp->left);			
-	}	
+    // or use if(root != NULL) 
+    if(root) stack.push(root); 
+
+    while(!stack.empty()){
+        const TreeNode* temp = stack.top();
+        stack.pop();
+        result.push_back(temp->val);
+
+        if(temp->right)  stack.push(temp->right);
+        if(temp->left)   stack.push(temp->left);			
+     }	
   
 	return result;
 }

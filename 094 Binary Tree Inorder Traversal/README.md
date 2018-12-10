@@ -40,6 +40,6 @@
 	
 
 ### 代码
-	1. 用栈，见[solution.h](https://github.com/rensandao/LeetCode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal/solution.h)
+1. 用栈，见[solution.h](https://github.com/rensandao/LeetCode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal/solution.h)
 
 ### 知识点

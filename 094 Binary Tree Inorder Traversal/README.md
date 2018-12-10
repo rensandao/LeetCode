@@ -4,7 +4,7 @@
 
 1. 用栈实现
 
-	前面做过144先序遍历。
+	前面做过先序遍历[144 Binary Tree Preorder Traversal](LeetCode/144 Binary Tree Preorder Traversal)。
 
 
 ### 代码

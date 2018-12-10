@@ -33,7 +33,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
    
    Morris实现的机理类似于线索二叉树。
 
-181209
+*181209*
 
 1.树的遍历是怎么样的？可以图示演绎。
 
@@ -105,7 +105,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 	  考虑先序输出优先左结点，其次右结点。整体也是先根点左侧部分，再右侧部分。但利用栈的性质LIFO,先右结点入栈，再左结点。 
 
 ### 代码
-* 使用栈进行迭代 181108
+* 使用栈进行迭代 *181108*
 ```
 class Solution {
 public:
@@ -138,7 +138,7 @@ public:
 };
 ```
 
-* Morris遍历181123
+* Morris遍历*181123*
 
 ```
 class Solution {

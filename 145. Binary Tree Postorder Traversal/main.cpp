@@ -5,5 +5,5 @@ using std::vector;
 
 int main() {
 
-  return result;
+  return 0;
 }

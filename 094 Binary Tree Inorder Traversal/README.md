@@ -2,11 +2,11 @@
 
 ### 思路
 
-1. 用栈实现（181210）
+1. 用栈实现 *181210*
 
 	前面刚做过先序遍历[144 Binary Tree Preorder Traversal](https://github.com/rensandao/LeetCode/tree/master/144.%20Binary%20Tree%20Preorder%20Traversal)。
 
-	(1) 181210 初次思路如下，但提交结果是Memory Limit Exceeded。
+	(1) *181210* 初次思路如下，但提交结果是Memory Limit Exceeded。
 
 	
 	a. 中序遍历顺序是：左孩子，根节点，左孩子。
@@ -25,7 +25,7 @@
 						是，输出叶子结点的数据。再输出当前结点数据。 
 						否，（当前结点入栈，同时当前结点更新为左结点(入栈）。再循环。） 
 
-	(2) 181210 参考代码
+	(2) *181210* 参考代码
 		
 	代码非常简洁。
 		

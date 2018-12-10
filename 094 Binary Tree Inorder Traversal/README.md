@@ -40,6 +40,6 @@
 	
 
 ### 代码
-	1. 用栈，见[solution.h](/solution.h)
+	1. 用栈，见[solution.h](./solution.h)
 
 ### 知识点

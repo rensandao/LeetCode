@@ -24,7 +24,7 @@ struct TreeNode {
 ```
 temp = st.top()
 if（!temp->left && !temp->right）{
-	res.push_back(temp);
+	res.push_back(temp->val);
 	st.pop();
 	
 } else {

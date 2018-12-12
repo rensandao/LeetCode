@@ -11,7 +11,8 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  };
- 
+
+//#1 postorder traversal using stack
 class solution {
 public:
    vector<int> postorderTraversal(TreeNode* root){

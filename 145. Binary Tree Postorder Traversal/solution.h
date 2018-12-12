@@ -12,7 +12,6 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  };
 
-//#1 postorder traversal using stack
 /*
 思路1：
 思维的出发点可以考虑下先序遍历，因为先序和后续遍历顺序中，都是先left或right。那么入栈的顺序也应该都是先压右孩子结点，在左孩子结点。
@@ -46,6 +45,7 @@ if(!temp->left && !temp->right) {
 答：设置限制条件：判断当前结点的左右孩子结点是否等于之前刚刚弹出来的栈顶结点，以确定前面的结点都已经保存过了，该轮到自己了。
 
 */
+//#1 postorder traversal using stack
 class solution {
 public:
    vector<int> postorderTraversal(TreeNode* root) {
@@ -69,3 +69,28 @@ public:
 	   return res;
    }
 };
+
+
+/*
+思路2：
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

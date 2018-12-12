@@ -42,9 +42,6 @@ if（!temp->left && !temp->right）{
 3.我们做一次演绎试图验证严谨性，但是到了叶子为1时，开始输出，有问题了：
 
 
-
-
-
 */
 class solution {
 public:
@@ -55,8 +52,8 @@ public:
 	   s.push(root);
 	   TreeNode *head = root;
 	   while(!s.empty()) {
-		   TreeNode *t = s.top();
-	   
+		   TreeNode *head = s.top();
+		  
 	   }
     
    }

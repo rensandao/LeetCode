@@ -23,7 +23,7 @@ struct TreeNode {
 那么，根据1和2条件大概写出下述代码初稿：
 ```
 temp = st.top();
-if（!temp->left && !temp->right）{
+if(!temp->left && !temp->right) {
 	res.push_back(temp->val);
 	st.pop();
 	
@@ -39,20 +39,32 @@ if（!temp->left && !temp->right）{
 	 / \
 	1   2
 
-3.我们做一次演绎试图验证严谨性，但是到了叶子为1时，开始输出，有问题了：
-
+3.我们做一次演绎试图验证严谨性，但是到了叶子结点为1时，开始输出，有问题了：
+此时2和1依次压入栈，当前结点更新为1的位置，保存数据，栈顶指针出栈，结点2再保存数据，栈顶指针出栈。轮到结点3，陷入了重复。不能进入条件，
+从而不能保存结点3数据。
+这时候判别的仍是左右孩子结点，而左右孩子结点已经保存了数据，同时弹出。对这个问题解决应该怎么解决？
+答：设置限制条件：判断当前结点的左右孩子结点是否等于之前刚刚弹出来的栈顶结点，以确定前面的结点都已经保存过了，该轮到自己了。
 
 */
 class solution {
 public:
-   vector<int> postorderTraversal(TreeNode* root){
-    if(!root) return{};
+   vector<int> postorderTraversal(TreeNode* root) {
+    if (!root)  return{};
 	   vector<int> res;
-	   stack<TreeNode*> s;
-	   s.push(root);
-	   TreeNode *head = root;
-	   while(!s.empty()) {
-		   TreeNode *head = s.top();
+	   stack<TreeNode*> st;
+	   st.push(root);
+	   TreeNode *prev_node = root;
+	   while (!st.empty()) {
+		   TreeNode *temp = st.top();
+		   if ((!temp->left && !temp->right) || temp->left == pre_node || temp->right == pre_node) {
+			   res.push_back(temp->val);
+			   st.pop();
+			   prev_node = temp;		   
+		   } else {
+				if(temp		   		
+		   
+		   
+		   }
 		  
 	   }
     

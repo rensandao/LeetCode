@@ -61,12 +61,9 @@ public:
 			   st.pop();
 			   prev_node = temp;		   
 		   } else {
-				if(temp		   		
-		   
-		   
+			   if (temp->right)  st.push(temp->right);
+			   if (temp->left)  st.push(temp->left);
 		   }
-		  
 	   }
-    
    }
 };

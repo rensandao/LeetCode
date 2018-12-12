@@ -20,6 +20,20 @@ struct TreeNode {
 1.入栈出栈操作针对的，都是当前结点，从根节点开始。再更新。
 2.当前结点是从根结点开始，再每个子根结点。根节点的输出顺序规定是在最后输出。那么输出的条件是：当前结点是叶子结点。这是能想到的一个点。
 但如果不是叶节点呢，那么操作正常的操作是参考先序遍历，先压右孩子结点（如果有的话），再左孩子结点（如果有的话）。
+那么，根据1和2条件
+```
+temp = st.top()
+if（!temp->left && !temp->right）{
+	res.push_back(temp);
+	st.pop();
+	
+} else {
+	if(temp->right) st.push(temp->right);
+	if(temp->left) st.push(temp->left);
+
+}
+```
+3.
 
 
 

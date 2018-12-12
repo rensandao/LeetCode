@@ -54,7 +54,9 @@ public:
 	   stack<TreeNode*> s;
 	   s.push(root);
 	   TreeNode *head = root;
-	   while()
+	   while(!s.empty()) {
+	   
+	   }
     
    }
 };

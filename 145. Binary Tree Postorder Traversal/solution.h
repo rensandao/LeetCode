@@ -44,11 +44,12 @@ if（!temp->left && !temp->right）{
 
 
 
+
 */
 class solution {
 public:
    vector<int> postorderTraversal(TreeNode* root){
-    
+    if(!root) return{};
     
    }
 };

@@ -51,6 +51,7 @@ public:
    vector<int> postorderTraversal(TreeNode* root){
     if(!root) return{};
 	   vector<int> res;
+	   stack<TreeNode*> s;
     
    }
 };

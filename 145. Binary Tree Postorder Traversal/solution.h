@@ -55,6 +55,7 @@ public:
 	   s.push(root);
 	   TreeNode *head = root;
 	   while(!s.empty()) {
+		   TreeNode *t = s.top();
 	   
 	   }
     

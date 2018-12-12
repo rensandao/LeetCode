@@ -53,6 +53,7 @@ public:
 	   vector<int> res;
 	   stack<TreeNode*> s;
 	   s.push(root);
+	   TreeNode*
     
    }
 };

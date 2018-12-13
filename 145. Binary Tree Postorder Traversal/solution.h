@@ -114,8 +114,12 @@ vector<int> postorderTraversal4(TreeNode* root) {
 	TreeNode *temp;
 	
 	while(！st.empty() || temp) {
-	
-	
+		if (temp) {
+			
+		} else {
+		
+		
+		}	
 	}
 	return res;
 }

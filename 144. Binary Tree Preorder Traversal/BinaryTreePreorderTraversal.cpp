@@ -53,21 +53,37 @@ vector<int> preorderTraversalM1(TreeNode* root) {
 	return result;
 }
 
-//preorder traversal using stack
+//preorder Traversal using stack
 //method2
 /*
-采用辅助结点
-	
+思路：
+1.判断当前结点是否为空；
+如果不为空，先压栈，同时输出数据。当前结点更新为左孩子结点。
+如果为空，则说明栈顶结点是叶子结点，由于刚刚已经输出过数据，所以先弹出；
+			取上上个结点，再更新当前结点为其右孩子
+
+分析：已经保存的数据仍会被压入栈中，然后在出栈。 
 */
-vector<int> preorderTraversalM2(TreeNode* root) {
+vector<int> preorderTraversal2(TreeNode* root) {
 	vector<int> res;
 	stack<TreeNode*> st;
-	st.push(root);
-
+	TreeNode *temp = root;
+	
+	while (!st.empty() || temp) {
+		
+		if (temp) {
+			st.push(temp);
+			res.push_back(temp->val);
+			temp = temp->left;			
+		} else {
+			TreeNode *t = st.top();
+			st.pop();
+			temp = t->right;
+			
+		}
+	}	
 	return res;
 }
-
-
 
 
 //create binary tree by tranfering value

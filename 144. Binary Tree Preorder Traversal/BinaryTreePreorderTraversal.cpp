@@ -3,11 +3,9 @@
 source: 
 Author: rensandao
 Date: 2018-12-08
-
 Reference:
 https://github.com/haoel/leetcode/blob/master/algorithms/cpp/binaryTreePreorderTraversal/binaryTreePreorderTraversal.cpp
 ****************************************************************/ 
-
 #include<stdio.h>
 #include<stdlib.h> // recommend c++ writing format. libray: malloc, free, rand，etc
 #include<iostream>
@@ -40,7 +38,6 @@ vector<int> preorderTraversalM1(TreeNode* root) {
 	
     // or use if(root != NULL) 
     if(root) stack.push(root); 
-
     while(!stack.empty()){
         const TreeNode* temp = stack.top();
         stack.pop();
@@ -49,8 +46,7 @@ vector<int> preorderTraversalM1(TreeNode* root) {
         if(temp->right)  stack.push(temp->right);
         if(temp->left)   stack.push(temp->left);			
      }	
-  
-	return result;
+	 return result;
 }
 
 //preorder Traversal using stack
@@ -70,7 +66,6 @@ vector<int> preorderTraversal2(TreeNode* root) {
 	TreeNode *temp = root;
 	
 	while (!st.empty() || temp) {
-		
 		if (temp) {
 			st.push(temp);
 			res.push_back(temp->val);
@@ -79,7 +74,6 @@ vector<int> preorderTraversal2(TreeNode* root) {
 			TreeNode *t = st.top();
 			st.pop();
 			temp = t->right;
-			
 		}
 	}	
 	return res;
@@ -102,7 +96,6 @@ TreeNode* CreateBiTree(){
 		T->left = CreateBiTree();
 		T->right = CreateBiTree();			
 	}			
-	
 	return T; //
 }			
 
@@ -134,7 +127,6 @@ int main(){
         3. preorder traversal
         4. print the result
 	*/
-
 	cout<<"please input Binary tree nodes' datas：" << endl; 
 	TreeNode* root1 = CreateBiTree();
 	

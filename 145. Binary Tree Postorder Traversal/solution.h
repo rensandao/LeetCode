@@ -1,3 +1,10 @@
+/*
+Source: https://github.com/rensandao/LeetCode/edit/master/145.%20Binary%20Tree%20Postorder%20Traversal/solution.h
+Author: rensandao
+Date: 2018-12-13
+
+Reference: http://www.cnblogs.com/grandyang/p/4146981.html
+*/
 #include <vector>
 #include <stack>
 
@@ -114,7 +121,7 @@ vector<int> postorderTraversal4(TreeNode* root) {
 }
 
 /*
-思路5：
+思路5：利用栈+栈=双栈
 
 */
 //postorder traversal using stack

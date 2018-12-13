@@ -104,7 +104,8 @@ vector<int> postorderTraversal3(TreeNode* root) {
 
 /*
 思路4：还是利用先序遍历另一种方法（辅助结点）的基础上+insert()方法
-先序另一种方法：
+先序顺序：根-左-右
+利用vector的insert,则在先序遍历算法的基础上改变的地方是，
 */
 //postorder traversal using stack
 //method4
@@ -119,8 +120,10 @@ vector<int> postorderTraversal4(TreeNode* root) {
 			res.insert(res.begin(),  temp->val);
 			temp = temp->right;
 		} else {
-					
-		
+			//save temporary stack top value;
+			TreeNode *prev = st.top();
+			st.pop();
+			temp = prev->left;		
 		}	
 	}
 	return res;

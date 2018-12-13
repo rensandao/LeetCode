@@ -63,7 +63,6 @@ vector<int> postorderTraversal2(TreeNode* root) {
 		   if (temp->left)  st.push(temp->left);
 	   }
    }
-
    return res;
 }
 

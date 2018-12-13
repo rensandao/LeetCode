@@ -24,8 +24,9 @@ struct TreeNode{
 	TreeNode(size_t x): val(x), left(NULL), right(NULL){}	//initialization
 };
 
-//preorder Traversal using stack 
-vector<int> preorderTraversal(TreeNode* root){
+//preorder Traversal using stack
+//method1
+vector<int> preorderTraversalM1(TreeNode* root) {
 	/*iterative solution using stack method.
 	The function of stack is store the pointer value temporarily,
 	and deal with left and right child tree order.
@@ -52,7 +53,24 @@ vector<int> preorderTraversal(TreeNode* root){
 	return result;
 }
 
-//#2: create binary tree by tranfering value
+//preorder traversal using stack
+//method2
+/*
+采用辅助结点
+	
+*/
+vector<int> preorderTraversalM2(TreeNode* root) {
+	vector<int> res;
+	stack<TreeNode*> st;
+	st.push(root);
+
+	return res;
+}
+
+
+
+
+//create binary tree by tranfering value
 TreeNode* CreateBiTree(){   
 	TreeNode *T;
 	ElemType ch;
@@ -109,7 +127,7 @@ int main(){
 	printTree(root1);
 	//preorder Traversal
 	cout<< endl; 
-	vector<int> v = preorderTraversal(root1);
+	vector<int> v = preorderTraversalM1(root1);
 	//print result
 	printVec(v);
 	cout<<endl;

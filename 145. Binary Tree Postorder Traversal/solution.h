@@ -156,17 +156,3 @@ vector<int> postorderTraversal5(TreeNode* root) {
 	return res;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-

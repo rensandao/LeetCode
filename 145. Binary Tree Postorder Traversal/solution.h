@@ -13,7 +13,7 @@ struct TreeNode {
  };
 
 /*
-思路1：
+思路2：
 思维的出发点可以考虑下先序遍历，因为先序和后续遍历顺序中，都是先left或right。那么入栈的顺序也应该都是先压右孩子结点，在左孩子结点。
 接下来核心的还是边界条件的确定问题：
 1.入栈出栈操作针对的，都是当前结点，从根节点开始。再更新。
@@ -45,7 +45,8 @@ if(!temp->left && !temp->right) {
 答：设置限制条件：判断当前结点的左右孩子结点是否等于之前刚刚弹出来的栈顶结点，以确定前面的结点都已经保存过了，该轮到自己了。
 
 */
-//#1 postorder traversal using stack
+//postorder traversal using stack
+//method2
 class solution {
 public:
    vector<int> postorderTraversal(TreeNode* root) {
@@ -72,7 +73,7 @@ public:
 
 
 /*
-思路2：
+思路3：
 1.利用容器vector的操作方法insert来找解法。
 后序遍历顺序依次为：left，right，root。我们在先序遍历时体会到了几行代码的简洁性：
 	先push_back根节点，再弹出栈。再压右-左孩子结点。 
@@ -82,9 +83,24 @@ public:
 
 insert时间消耗：插入首位O(1)，vector其他数据相应全部都要后移一位。空间就多了一位。 
 栈时间空间复杂度为：O(n) 
-
-
 */
+//postorder traversal using stack. 
+//method3 
+vector<int> postorderTraversal3(TreeNode* root) {
+	vector<int> res;
+	stack<TreeNode*> st;
+	st.push(root);
+	
+	while (!st.empty()) {
+		TreeNode *temp = st.top();
+		st.pop();
+		res.insert(res.begin(), temp->val);
+		
+		if(temp->left)  st.push(temp->left);
+		if(temp->right)  st.push(temp->right);	
+	} 
+	return res;
+}
 
 
 

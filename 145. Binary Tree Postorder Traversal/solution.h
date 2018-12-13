@@ -43,7 +43,6 @@ if(!temp->left && !temp->right) {
 从而不能保存结点3数据。
 这时候判别的仍是左右孩子结点，而左右孩子结点已经保存了数据，同时弹出。对这个问题解决应该怎么解决？
 答：设置限制条件：判断当前结点的左右孩子结点是否等于之前刚刚弹出来的栈顶结点，以确定前面的结点都已经保存过了，该轮到自己了。
-
 */
 //postorder traversal using stack
 //method2
@@ -67,8 +66,6 @@ vector<int> postorderTraversal2(TreeNode* root) {
 
    return res;
 }
-
-
 
 /*
 思路3：

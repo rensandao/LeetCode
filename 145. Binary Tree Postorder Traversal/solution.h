@@ -97,7 +97,7 @@ vector<int> postorderTraversal3(TreeNode* root) {
 }
 
 /*
-思路4：还是利用先序遍历另一种方法的基础上+insert()方法
+思路4：还是利用先序遍历另一种方法（辅助结点）的基础上+insert()方法
 先序另一种方法：
 */
 //postorder traversal using stack
@@ -113,6 +113,12 @@ vector<int> postorderTraversal4(TreeNode* root) {
 	return res;
 }
 
+/*
+思路5：
+
+*/
+//postorder traversal using stack
+//method5
 
 
 

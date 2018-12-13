@@ -73,7 +73,7 @@ vector<int> postorderTraversal2(TreeNode* root) {
 	先push_back根节点，再弹出栈。再压右-左孩子结点。 
 这里就可以先把根节点数据直接先存入vector中。vector的push_back是末端插入。
 我们在保存的时候，可以其将左右孩子的结点数值，通过插入vector首端，变相地完成排序输出。所以严格地说，
-这种方法是栈+insert.
+这种方法是【栈+insert】.
 
 insert时间消耗：插入首位O(1)，vector其他数据相应全部都要后移一位。空间就多了一位。 
 栈时间空间复杂度为：O(n) 
@@ -97,8 +97,8 @@ vector<int> postorderTraversal3(TreeNode* root) {
 }
 
 /*
-思路4：
-
+思路4：还是利用先序遍历另一种方法的基础上+insert()方法
+先序另一种方法：
 */
 //postorder traversal using stack
 //method4

@@ -47,29 +47,27 @@ if(!temp->left && !temp->right) {
 */
 //postorder traversal using stack
 //method2
-class solution {
-public:
-   vector<int> postorderTraversal(TreeNode* root) {
-       if (!root)  return{};
-	   vector<int> res;
-	   stack<TreeNode*> st;
-	   st.push(root);
-	   TreeNode *prev_node = root;
-	   while (!st.empty()) {
-		   TreeNode *temp = st.top();
-		   if ((!temp->left && !temp->right) || temp->left == pre_node || temp->right == pre_node) {
-			   res.push_back(temp->val);
-			   st.pop();
-			   prev_node = temp;		   
-		   } else {
-			   if (temp->right)  st.push(temp->right);
-			   if (temp->left)  st.push(temp->left);
-		   }
+vector<int> postorderTraversal2(TreeNode* root) {
+   if (!root)  return{};
+   vector<int> res;
+   stack<TreeNode*> st;
+   st.push(root);
+   TreeNode *prev_node = root;
+   while (!st.empty()) {
+	   TreeNode *temp = st.top();
+	   if ((!temp->left && !temp->right) || temp->left == pre_node || temp->right == pre_node) {
+		   res.push_back(temp->val);
+		   st.pop();
+		   prev_node = temp;		   
+	   } else {
+		   if (temp->right)  st.push(temp->right);
+		   if (temp->left)  st.push(temp->left);
 	   }
-	   
-	   return res;
    }
-};
+
+   return res;
+}
+
 
 
 /*
@@ -90,18 +88,34 @@ vector<int> postorderTraversal3(TreeNode* root) {
 	vector<int> res;
 	stack<TreeNode*> st;
 	st.push(root);
-	
+
 	while (!st.empty()) {
 		TreeNode *temp = st.top();
 		st.pop();
 		res.insert(res.begin(), temp->val);
-		
+
 		if(temp->left)  st.push(temp->left);
 		if(temp->right)  st.push(temp->right);	
 	} 
 	return res;
 }
 
+/*
+思路4：
+
+*/
+//postorder traversal using stack
+//method4
+vector<int> postorderTraversal4(TreeNode* root) {
+	vector<int> res;
+	stack<TreeNode*> st;
+	st.push(root)
+	
+	
+
+
+	return res;
+}
 
 
 

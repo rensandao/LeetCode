@@ -115,9 +115,11 @@ vector<int> postorderTraversal4(TreeNode* root) {
 	
 	while(！st.empty() || temp) {
 		if (temp) {
-			
+			st.push(temp);
+			res.insert(res.begin(),  temp->val);
+			temp = temp->right;
 		} else {
-		
+					
 		
 		}	
 	}

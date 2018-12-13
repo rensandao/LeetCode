@@ -111,11 +111,12 @@ vector<int> postorderTraversal3(TreeNode* root) {
 vector<int> postorderTraversal4(TreeNode* root) {
 	vector<int> res;
 	stack<TreeNode*> st;
-	st.push(root)
+	TreeNode *temp;
+	
+	while(！st.empty() || temp) {
 	
 	
-
-
+	}
 	return res;
 }
 

@@ -101,12 +101,13 @@ vector<vector<int>> levelOrder2(TreeNode* root) {
 	return res;
 }
 
-void levelOrderRecursive(TreeNode *root, int level, vector<vector<int>> &res) {
-	if (!root) return{};
+void levelOrderRecursive(TreeNode *temp, int level, vector<vector<int>> &res) {
 	//res内的vector个数正好代表了有几层。如果进入下一层，则在res中先初始化一组空vector，以便后续push_back
-	if(res.size() < level)
+	if (res.size() < level)  res.push_back({});  //c++11: result.emplace_back(std::vector<int>());
+	res[level-1].push_back(temp->val);
 	
-	
+	if (temp->left)  levelOrderRecursive(temp->left, level+1, res);
+	if (temp->right)  levelOrderRecursive(temp->right, level+1, res);	
 }
 
 

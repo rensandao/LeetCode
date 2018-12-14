@@ -10,7 +10,15 @@ struct TreeNode {
 	TreeNode *right;
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  };
- 
+
+//method0
+//error code
+
+
+
+
+//level order traversal using queue
+//mehtod1
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {

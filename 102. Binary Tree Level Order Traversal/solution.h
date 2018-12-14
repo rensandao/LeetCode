@@ -51,8 +51,10 @@ vector<vector<int>> levelOrder0(TreeNode* root) {
     return res;   
 }
 
-
-
+/*
+思路1：queue这种结构，单方向向前推动的（如食堂排队打饭），不像栈来回折腾（容易让人生闷气）。
+queue很好解决一段段，一层一层向前推进，从而符合层序遍历的方式。
+*/
 //level order traversal using queue
 //mehtod1
 vector<vector<int>> levelOrder1(TreeNode* root) {

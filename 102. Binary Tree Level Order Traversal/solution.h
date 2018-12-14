@@ -81,7 +81,15 @@ vector<vector<int>> levelOrder1(TreeNode* root) {
 
 
 
+/*
+思路2：递归调用
+*/
+//level order traversal using recursive 
+//recursive
+//method 2
+vector<vector<int>> levelOrder2(TreeNode* root) {
 
+}
 
 
 

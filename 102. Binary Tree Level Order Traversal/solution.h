@@ -84,16 +84,11 @@ vector<vector<int>> levelOrder1(TreeNode* root) {
 
 /*
 思路2：递归调用
+对于每一层的结点及所在层数flag，递归循环保存在每一层的数据，并且直接在vector<vector<int>> res中操作。这个下标直接操作的方法倒是没碰到，但显然不错。
 */
 //level order traversal using recursive iteration 
 //recursive
 //method2
-/*
-递归迭代思路：
-对于每一层的结点及所在层数flag，递归循环保存在每一层的数据，并且直接在vector<vector<int>> res中操作。这个下标直接操作的方法倒是没碰到，但显然不错。
-
-*/
-
 vector<vector<int>> levelOrder2(TreeNode* root) {
 	if(!root) return{};
 	vector<vector<int>> res;
@@ -109,10 +104,5 @@ void levelOrderRecursive(TreeNode *temp, int level, vector<vector<int>> &res) {
 	if (temp->left)  levelOrderRecursive(temp->left, level+1, res);
 	if (temp->right)  levelOrderRecursive(temp->right, level+1, res);	
 }
-
-
-
-
-
 
         

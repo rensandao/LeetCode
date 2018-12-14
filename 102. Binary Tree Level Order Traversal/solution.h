@@ -61,12 +61,18 @@ vector<vector<int>> levelOrder1(TreeNode* root) {
 	q.push(root);
 	
 	while (!q.empty()) {
+		TreeNode *vlevel;
 		int qlength = q.size();
+		//由于在迭代循环过程中，队列是有进有出的，所以size在变动；因为不能放在for循环条件里面。 
 		for (int i=0; i<qlength; i++) {
+			TreeNode *t= q.front();
+	   		q.pop();
+	   		vlevel.push_back(t->val);
 			
-		
-		}
-	
+			if (t->left)  q.push(t->left);
+			if (t->right)  q.push(t->right);   	
+		}   
+		res.push_back(vlevel); 
 	}
 	return res;
 }

@@ -94,12 +94,18 @@ vector<vector<int>> levelOrder1(TreeNode* root) {
 vector<vector<int>> levelOrder2(TreeNode* root) {
 	if(!root) return{};
 	vector<vector<int>> res;
-	vector<int> levelnodes = levelOrderRecursive(root, res;
+	int level=0;
+	for(
+	levelOrderRecursive(root, level, res);
 	res.push_back(
 }
 
-vector<int> levelOrderRecursive(TreeNode *root, &) {
-	if(!root) 
+void levelOrderRecursive(TreeNode *root, int level, vector<vector<int>> &res) {
+	if (!root) return{};
+	else {
+		for
+	
+	}
 
 }
 

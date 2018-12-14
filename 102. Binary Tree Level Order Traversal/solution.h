@@ -19,7 +19,7 @@ struct TreeNode {
 考虑到每次循环，vlevel的数据需要清空，还得需要一个备用容器。这还是这是结点指针。对于数据的存储也得考虑个容器，还得备份。这都用多少个容器了。
 直到看到queue，才再一次感受到数据结构的巧妙之处。这应该就是最底层的轮子了。你自己造轮子还是太嫩，得记住它再多用它。
 */
-vector<vector<int>> levelOrder(TreeNode* root) {
+vector<vector<int>> levelOrder0(TreeNode* root) {
     if(!root)  return{};
     vector<vector<int>> res;
     vector<TreeNode*> vec_ptr;
@@ -55,9 +55,28 @@ vector<vector<int>> levelOrder(TreeNode* root) {
 
 //level order traversal using queue
 //mehtod1
-class Solution {
-public:
-    vector<vector<int>> levelOrder(TreeNode* root) {
+vector<vector<int>> levelOrder1(TreeNode* root) {
+	vector<vector<int>> res;
+	queue<TreeNode*> q;
+	q.push(root);
+	
+	while (!q.empty()) {
+		int qlength = q.size();
+		for (int i=0; i<qlength; i++) {
+			
+		
+		}
+	
+	}
+	return res;
+}
+
+
+
+
+
+
+
+
+
         
-    }
-};

@@ -80,16 +80,29 @@ vector<vector<int>> levelOrder1(TreeNode* root) {
 }
 
 
-
 /*
 思路2：递归调用
 */
-//level order traversal using recursive 
+//level order traversal using recursive iteration 
 //recursive
-//method 2
+//method2
+/*
+递归迭代思路：
+
+*/
+
 vector<vector<int>> levelOrder2(TreeNode* root) {
+	if(!root) return{};
+	vector<vector<int>> res;
+	vector<int> levelnodes = levelOrderRecursive(root, res;
+	res.push_back(
+}
+
+vector<int> levelOrderRecursive(TreeNode *root, &) {
+	if(!root) 
 
 }
+
 
 
 

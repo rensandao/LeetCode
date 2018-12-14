@@ -88,6 +88,7 @@ vector<vector<int>> levelOrder1(TreeNode* root) {
 //method2
 /*
 递归迭代思路：
+对于每一层的结点及所在层数flag，递归循环保存在每一层的数据，并且直接在vector<vector<int>> res中操作。这个下标直接操作的方法倒是没碰到，但显然不错。
 
 */
 

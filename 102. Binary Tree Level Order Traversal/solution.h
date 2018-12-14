@@ -54,6 +54,8 @@ vector<vector<int>> levelOrder0(TreeNode* root) {
 /*
 思路1：queue这种结构，单方向向前推动的（如食堂排队打饭），不像栈来回折腾（容易让人生闷气）。
 queue很好解决一段段，一层一层向前推进，从而符合层序遍历的方式。
+
+reference: LeetCode AC第一档答案。
 */
 //level order traversal using queue
 //mehtod1
@@ -95,18 +97,16 @@ vector<vector<int>> levelOrder1(TreeNode* root) {
 vector<vector<int>> levelOrder2(TreeNode* root) {
 	if(!root) return{};
 	vector<vector<int>> res;
-	int level=0;
-	for()
-	levelOrderRecursive(root, level, res);
-	res.push_back();
+	levelOrderRecursive(root, 1, res);
+	return res;
 }
 
 void levelOrderRecursive(TreeNode *root, int level, vector<vector<int>> &res) {
 	if (!root) return{};
-	else {
-		for
+	//res内的vector个数正好代表了有几层。如果进入下一层，则在res中先初始化一组空vector，以便后续push_back
+	if(res.size() < level)
 	
-	}
+	
 }
 
 

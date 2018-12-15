@@ -106,4 +106,8 @@ void levelOrderRecursive(TreeNode *temp, int level, vector<vector<int>> &res) {
 	if (temp->right)  levelOrderRecursive(temp->right, level+1, res);	
 }
 
-        
+/*
+181215
+思路3：迭代法2
+s形遍历，每个一层翻转再保存。
+*/

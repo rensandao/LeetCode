@@ -28,16 +28,23 @@ struct TreeNode {
 
  /*
  181215
- 思路2：利用insert的方法，每一层的vector插入到首段之前。
- 
+ 思路2：在递归方法的基础上， 利用vector的操作insert，每一层的vector插入到首段之前。
  
  */
 //using
-//method1
+//method2
 vector<vector<int>> levelOrderBottom1(TreeNode* root) {
-	
+	vector<vector<int>> res;
+		
 
 }
+
+/*
+思路3：
+
+*/
+
+
 
 
 

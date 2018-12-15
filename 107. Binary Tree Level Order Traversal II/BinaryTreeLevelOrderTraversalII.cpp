@@ -28,23 +28,22 @@ struct TreeNode {
 
  /*
  181215
- 思路2：在递归方法的基础上， 利用vector的操作insert，每一层的vector插入到首段之前。
- 
+ 思路2：在递归方法的基础上， 利用reverse，把从上到下顺序结果颠倒，即为结果。 
  */
 //using
 //method2
-vector<vector<int>> levelOrderBottom1(TreeNode* root) {
-	if(!root) return {};
+vector<vector<int>> levelOrderBottom(TreeNode* root) {
+	if (!root)  return {};
 	vector<vector<int>> res;
-	if (root) FindLevelOrder(root, 1, res);
-	
+	if (root)  FindLevelOrder(root, 1, res);
+	reverse(res.begin(), res.end());
 	return res;
 }
 
-vector<int> FindLevelOrder(TreeNode *node, int level, vector<vector<int>> &res) {
-	if(res.size() < level)  res.insert(res.begin(), vector<int> ());
-	res[0].push_back(node->val);
-	
+void FindLevelOrder(TreeNode *node, int level, vector<vector<int>> &res) {
+	if(res.size() < level)  res.emplace_back(vector<int>());
+	res[level-1].emplace_back(node->val);
+
 	if(node->left) FindLevelOrder(node->left, level+1, res);
 	if(node->right) FindLevelOrder(node->right, level+1, res);
 }

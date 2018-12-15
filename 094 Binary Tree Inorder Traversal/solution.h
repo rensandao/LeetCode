@@ -39,8 +39,7 @@ public:
                 
                 temp = temp->right;            
             }           
-        }
-             
+        }     
         return res;   
     }
 };

@@ -5,8 +5,10 @@ First Creation: 2018-12-15
 ****************************************************************/ 
 #include <iostream>
 #include <vector>
-
+#include <queue>
+#include <algorithm> // std::reverse()
 using std::vector;
+using std::reverse;
 
 //Definition for a binary tree node.
 struct TreeNode {

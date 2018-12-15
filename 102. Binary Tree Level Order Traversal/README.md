@@ -27,7 +27,7 @@ queue这种结构，单方向向前推动的（如食堂排队打饭），不像
 
 ### 代码
 
-见solution.h
+见[solution.h](https://github.com/rensandao/LeetCode/blob/master/102.%20Binary%20Tree%20Level%20Order%20Traversal/solution.h)
 
 ### 知识点
 * 队列queue

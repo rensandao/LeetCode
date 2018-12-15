@@ -39,6 +39,11 @@ vector<vector<int>> levelOrderBottom1(TreeNode* root) {
 
 }
 
+vector<int> FindLevelOrder(TreeNode *node, int level, vector<vector<int>> &res) {
+
+
+}
+
 /*
 思路3：
 

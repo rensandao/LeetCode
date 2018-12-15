@@ -31,4 +31,4 @@ queue这种结构，单方向向前推动的（如食堂排队打饭），不像
 
 ### 知识点
 * 队列queue
-* deque(double-ended-queue)
+* 双端队列deque(double-ended-queue)

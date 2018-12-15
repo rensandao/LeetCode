@@ -85,6 +85,7 @@ vector<vector<int>> levelOrder1(TreeNode* root) {
 /*
 思路2：递归调用
 对于每一层的结点及所在层数flag，递归循环保存在每一层的数据，并且直接在vector<vector<int>> res中操作。这个下标直接操作的方法倒是没碰到，但显然不错。
+reference: Leetcode sample 0 ms submission
 */
 //level order traversal using recursive iteration 
 //recursive

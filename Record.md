@@ -108,7 +108,7 @@
  * 181214
  
    [102. Binary Tree Level Order Traversal](https://github.com/rensandao/LeetCode/tree/master/102.%20Binary%20Tree%20Level%20Order%20Traversal)
- 第一种，用到了队列queue结构的知识点；第二种用到了递归方法，其中对vector容器的操作比较特别，但很好。
+ 第一种，用到了``队列queue结构的知识点（或者deque的用法）``；第二种用到了递归方法，其中对vector容器的操作比较特别，但很好。
   
   
   

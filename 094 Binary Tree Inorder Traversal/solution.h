@@ -1,7 +1,7 @@
 /****************************************************************
 source: 
 Author: rensandao
-Date: 2018-12-08
+First Creation: 2018-12-08
 
 Code format and structure reference: 
 https://github.com/pezy/LeetCode/blob/master/093.%20Binary%20Tree%20Inorder%20Traversal/solution.h

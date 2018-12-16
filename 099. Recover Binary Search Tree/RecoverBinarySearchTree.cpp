@@ -14,6 +14,15 @@ struct TreeNode{
 	TreeNode(size_t x): val(x), left(NULL), right(NULL){}	
 };
 
+/*
+思路1：
+
+时间复杂度：
+空间复杂度：
+Runtime: 
+*/
+//method1
+//recovery binary search tree using ...
 void recoverTree(TreeNode *root) {
         
 }

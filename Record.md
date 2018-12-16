@@ -119,11 +119,11 @@
   
   * 181216
   
-  [103. Binary Tree Zigzag Level Order Traversal](https://github.com/rensandao/LeetCode/blob/master/103.%20Binary%20Tree%20Zigzag%20Level%20Order%20Traversal/BinaryTreeZigzagLevelOrderTraversal.cpp)
+    [103. Binary Tree Zigzag Level Order Traversal](https://github.com/rensandao/LeetCode/blob/master/103.%20Binary%20Tree%20Zigzag%20Level%20Order%20Traversal/BinaryTreeZigzagLevelOrderTraversal.cpp)
   
-  写了第一种方法，递归方法。也是根据102题的递归思路进行代码修改。添加了的每层的判断条件，以确定vector的插入方式。用到push_back和insert方法。
+    写了第一种方法，递归方法。也是根据102题的递归思路进行代码修改。添加了的每层的判断条件，以确定vector的插入方式。用到push_back和insert方法。
   
-  第二种方法，可以继续再考虑迭代。
+    第二种方法暂未写，可以继续再考虑迭代。
   
   
   

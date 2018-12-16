@@ -86,7 +86,9 @@ vector<vector<int>> zigzagLevelOrder2(TreeNode *root) {
 	return res; 
 } 
 
-
+/*
+对方法2的小技巧调整
+*/
 
 
 

@@ -23,7 +23,7 @@ struct TreeNode {
 */
 //zigzag level order traversal using 
 //method1
-vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+vector<vector<int>> zigzagLevelOrder(TreeNode *root) {
         
 }
 

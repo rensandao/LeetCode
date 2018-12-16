@@ -22,15 +22,45 @@ struct TreeNode {
  /*
  181215
  思路1：迭代法。如果用继续用队列queue的方式，行不行。
-
+ (1)queue
+ 	还是利用vector的insert方式，从上到下层，每一层保存的vLevel插入到容器的首段。
+时间复杂度：空间复杂度：
+	runtime: 8ms, 16.84%faster.
+	 
+ (2)
+ 
+ 
 */
+vector<vector<int>> levelOrderBottom1(TreeNode *root) {
+        if(!root) return {};
+        vector<vector<int>> res;
+        queue<TreeNode*> q;
+        q.push(root);	
+
+        while(!q.empty()){
+            vector<int> vLevel;
+            int vLength = q.size(); 
+            for (int i=0; i<vLength; i++) {
+                TreeNode *temp = q.front();
+                q.pop();
+                vLevel.push_back(temp->val);
+
+                if (temp->left)  q.push(temp->left);
+                if (temp->right)  q.push(temp->right);	
+            }
+            res.insert(res.begin(), vLevel);		
+        }
+        return res;
+    }
 
 
 
 
  /*
  181215
- 思路2：在递归方法的基础上， 利用reverse，把从上到下顺序结果颠倒，即为结果。 
+ 思路2：在递归方法的基础上， 利用reverse，把从上到下顺序结果颠倒，即为结果。
+ 时间复杂度：空间复杂度：
+ running time:4ms, 98.83%faster
  */
 //using
 //method2

@@ -52,7 +52,7 @@ if(!temp->left && !temp->right) {
 */
 //postorder traversal using stack
 //method2
-vector<int> postorderTraversal2(TreeNode* root) {
+vector<int> postorderTraversal2(TreeNode *root) {
    if (!root)  return{};
    vector<int> res;
    stack<TreeNode*> st;
@@ -86,7 +86,7 @@ insert时间消耗：插入首位O(1)，vector其他数据相应全部都要后�
 */
 //postorder traversal using stack. 
 //method3 
-vector<int> postorderTraversal3(TreeNode* root) {
+vector<int> postorderTraversal3(TreeNode *root) {
 	vector<int> res;
 	stack<TreeNode*> st;
 	st.push(root);
@@ -109,7 +109,7 @@ vector<int> postorderTraversal3(TreeNode* root) {
 */
 //postorder traversal using stack
 //method4
-vector<int> postorderTraversal4(TreeNode* root) {
+vector<int> postorderTraversal4(TreeNode *root) {
 	vector<int> res;
 	stack<TreeNode*> st;
 	TreeNode *temp;
@@ -135,7 +135,7 @@ vector<int> postorderTraversal4(TreeNode* root) {
 */
 //postorder traversal using stack
 //method5
-vector<int> postorderTraversal5(TreeNode* root) {
+vector<int> postorderTraversal5(TreeNode *root) {
 	vector<int> res;
 	stack<TreeNode*> st1, st2;
 	st1.push(root);

@@ -21,10 +21,12 @@ struct TreeNode {
 
  /*
  181215
- 思路1：迭代法。如果用继续用队列queue的方式，行不行。
+ 思路1：参考102. Binary Tree Level Order Traversal
+ 迭代法。如果用继续用队列queue的方式，行不行。
  (1)queue
  	还是利用vector的insert方式，从上到下层，每一层保存的vLevel插入到容器的首段。
-时间复杂度：空间复杂度：
+	时间复杂度：
+	空间复杂度：
 	runtime: 8ms, 16.84%faster.
 	 
  (2)
@@ -58,8 +60,10 @@ vector<vector<int>> levelOrderBottom1(TreeNode *root) {
 
  /*
  181215
- 思路2：在递归方法的基础上， 利用reverse，把从上到下顺序结果颠倒，即为结果。
- 时间复杂度：空间复杂度：
+ 思路2：参考题102. Binary Tree Level Order Traversal
+ 在递归方法的基础上， 利用reverse，把从上到下顺序结果颠倒，即为结果。
+ 时间复杂度：
+ 空间复杂度：
  running time:4ms, 98.83%faster
  */
 //using

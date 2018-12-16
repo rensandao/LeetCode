@@ -32,7 +32,7 @@ Given target = 5, return true.    Given target = 20, return false.
 ```
 class Solution {
 public:
-    bool searchMatrix(vector<vector<int>>& matrix, int target) {  
+    bool searchMatrix(vector<vector<int>> &matrix, int target) {  
         if(matrix.size()==0 || matrix.front().size()==0) return false; // 使用 matrix.empty() 会报错!? 
         const size_t row = matrix.size();
         const size_t col = matrix.front().size();

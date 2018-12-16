@@ -112,11 +112,13 @@
    第一种迭代方法，用到了``队列queue结构的知识点（或者deque的用法）``；第二种用到了递归方法，其中对vector容器的操作比较特别，但很好。
   
   * 181215
+  
     [107. Binary Tree Level Order Traversal II](https://github.com/rensandao/LeetCode/blob/master/107.%20Binary%20Tree%20Level%20Order%20Traversal%20II/BinaryTreeLevelOrderTraversalII.cpp) 
     
 	两种思路：迭代和递归的方法。主要就是参照102题的两种方法，主要修改部分在对每一层结点的存储方式，用到vector::insert(),和std::inverse()。
   
   * 181216
+  
   [103. Binary Tree Zigzag Level Order Traversal](https://github.com/rensandao/LeetCode/blob/master/103.%20Binary%20Tree%20Zigzag%20Level%20Order%20Traversal/BinaryTreeZigzagLevelOrderTraversal.cpp)
   
   写了第一种方法，递归方法。也是根据102题的递归思路进行代码修改。添加了的每层的判断条件，以确定vector的插入方式。用到push_back和insert方法。

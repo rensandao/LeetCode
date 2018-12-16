@@ -79,11 +79,11 @@ vector<vector<int>> levelOrderBottom(TreeNode *root) {
 }
 
 void FindLevelOrder(TreeNode *node, int level, vector<vector<int>> &res) {
-	if(res.size() < level)  res.emplace_back(vector<int>());
+	if (res.size() < level)  res.emplace_back(vector<int>());
 	res[level-1].emplace_back(node->val);
 
-	if(node->left) FindLevelOrder(node->left, level+1, res);
-	if(node->right) FindLevelOrder(node->right, level+1, res);
+	if (node->left)  FindLevelOrder(node->left, level+1, res);
+	if (node->right)  FindLevelOrder(node->right, level+1, res);
 }
 
 /*

@@ -34,7 +34,7 @@ struct TreeNode {
  */
 //using
 //method2
-vector<vector<int>> levelOrderBottom(TreeNode* root) {
+vector<vector<int>> levelOrderBottom(TreeNode *root) {
 	if (!root)  return {};
 	vector<vector<int>> res;
 	if (root)  FindLevelOrder(root, 1, res);

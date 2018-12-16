@@ -33,6 +33,8 @@ struct TreeNode {
  
  
 */
+//Iteration mind. Binary tree level order tarversal.
+//method1
 vector<vector<int>> levelOrderBottom1(TreeNode *root) {
         if(!root) return {};
         vector<vector<int>> res;
@@ -62,11 +64,11 @@ vector<vector<int>> levelOrderBottom1(TreeNode *root) {
  181215
  思路2：参考题102. Binary Tree Level Order Traversal
  在递归方法的基础上， 利用reverse，把从上到下顺序结果颠倒，即为结果。
- 时间复杂度：
- 空间复杂度：
- running time:4ms, 98.83%faster
+ 时间复杂度：O(n)
+ 空间复杂度：O()
+ running time: 4ms, 98.83%faster
  */
-//using
+//recusive mind.
 //method2
 vector<vector<int>> levelOrderBottom(TreeNode *root) {
 	if (!root)  return {};

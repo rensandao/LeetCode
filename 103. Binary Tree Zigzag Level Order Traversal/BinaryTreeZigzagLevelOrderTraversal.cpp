@@ -118,7 +118,7 @@ vector<vector<int>> zigzagLevelOrder3(TreeNode *root) {
 		res.push_back(levelVec);
 		isLR = !isLR; //每一层结束，标志取反。		
 	}	
-    return res; 
+	return res; 
 }
 
 

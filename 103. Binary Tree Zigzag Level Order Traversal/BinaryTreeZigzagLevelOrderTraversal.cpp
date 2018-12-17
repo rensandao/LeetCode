@@ -51,13 +51,12 @@ void FindLevelOrder(TreeNode *node, int level, vector<vector<int>> &res) {
 /*
 181216
 思路2：迭代方法+static 标记（也是用于判别层数，再确定插入方式）。
-上述两种插入方式都用到insert()方法，强调的是在单个元素插入时就确定位置；也可以采用整体reverse()的方法，比如将从左右正序插入完的vector反转。
 
 时间复杂度：
 空间复杂度：
 Runtime: 
 */
-
+//method2. 
 vector<vector<int>> zigzagLevelOrder2(TreeNode *root) {
 	vector<vector<int>> res;
 	if(!root) return res;
@@ -88,7 +87,13 @@ vector<vector<int>> zigzagLevelOrder2(TreeNode *root) {
 
 /* 
 181217
-对方法2的小技巧调整
+对方法2的小技巧调整:
+上述思路1、2中的vector插入方式都用到insert()方法，强调的是在单个元素插入时就确定位置；也可以采用整体reverse()的方法，比如将从左右正序插入
+完的vector反转。
+
+时间复杂度：
+空间复杂度：
+Runtime: 4ms, 47.54%faster.
 */
 //method3
 vector<vector<int>> zigzagLevelOrder3(TreeNode *root) {

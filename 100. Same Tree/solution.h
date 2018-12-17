@@ -1,3 +1,7 @@
+#include <vector>
+
+using std::vector;
+
 //Definition for a binary tree node.
 struct TreeNode {
     int val;
@@ -6,10 +10,10 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
  
-class Solution {
-public:
-    bool isSameTree(TreeNode* p, TreeNode* q) {
-        
-        
-    }
-};
+
+
+bool isSameTree(TreeNode* p, TreeNode* q) {
+
+
+}
+

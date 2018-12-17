@@ -15,7 +15,13 @@ struct TreeNode{
 };
 
 /*
+181218
 思路1：
+
+
+
+
+
 
 时间复杂度：
 空间复杂度：
@@ -23,6 +29,27 @@ Runtime:
 */
 //method1
 //recovery binary search tree using ...
-void recoverTree(TreeNode *root) {
+void recoverTree1(TreeNode *root) {
         
 }
+
+
+/*
+思路2：
+
+
+
+时间复杂度：
+空间复杂度：
+Runtime: 
+*/
+//method2
+//recovery binary search tree using ...
+void recoverTree2(TreeNode *root) {
+        
+}
+
+
+
+
+

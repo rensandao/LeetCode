@@ -51,6 +51,7 @@ void FindLevelOrder(TreeNode *node, int level, vector<vector<int>> &res) {
 /*
 181216
 思路2：迭代方法+static 标记（也是用于判别层数，再确定插入方式）。
+??提交问题：这点很诡异，提交时显示其中一个input的输出结果不一致，但是重新在testcase测试结果却是一致的。导致多次提交都wrong answer.
 
 时间复杂度：
 空间复杂度：

@@ -1,5 +1,4 @@
 #include <vector>
-
 using std::vector;
 
 //Definition for a binary tree node.
@@ -11,9 +10,19 @@ struct TreeNode {
 };
  
 
+/*
+思路1：
 
+*/
+//are two trees same?
+//method1. 
 bool isSameTree(TreeNode* p, TreeNode* q) {
-
-
+	bool res;
+	
+	
+	
+	
+	
+	return res;
 }
 

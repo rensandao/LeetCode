@@ -86,9 +86,37 @@ vector<vector<int>> zigzagLevelOrder2(TreeNode *root) {
 	return res; 
 } 
 
-/*
+/* 
+181217
 对方法2的小技巧调整
 */
+//method3
+vector<vector<int>> zigzagLevelOrder3(TreeNode *root) {
+    vector<vector<int>> res;
+    if(!root) return res;
+    queue<TreeNode*> q;
+    q.push(root);
+	bool isLR = false;  //在这里设置标志
+	
+    while (!q.empty()) {
+        vector<int> levelVec;
+        
+        int vLength = q.size();
+        for (int i=0; i<vLength; i++) {
+            TreeNode *temp = q.front();
+            q.pop();
+            
+            levelVec.push_back(temp->val);
+            
+            if (temp->left)  q.push(temp->left);
+            if (temp->right)  q.push(temp->right);
+        }
+        if(isLR) reverse(levelVec.begin(), levelVec.end()); //隔一层的vector先反转，再压入大vector中。
+        res.push_back(levelVec);
+		isLR = !isLR; //每一层结束，标志取反。		
+    }	
+    return res; 
+}
 
 
 

@@ -27,9 +27,9 @@ runtime: 4ms, 47.54%faster.
 */
 //zigzag level order traversal using 
 //method1
-vector<vector<int>> zigzagLevelOrder1(TreeNode *root) {
+vector<vector<int> > zigzagLevelOrder1(TreeNode *root) {
 	if (!root)  return {};
-	vector<vector<int>> res;
+	vector<vector<int> > res;
 	if (root)  FindLevelOrder(root, 1, res);
 
 	return res;
@@ -58,8 +58,8 @@ void FindLevelOrder(TreeNode *node, int level, vector<vector<int>> &res) {
 Runtime: 
 */
 //method2. 
-vector<vector<int>> zigzagLevelOrder2(TreeNode *root) {
-	vector<vector<int>> res;
+vector<vector<int> > zigzagLevelOrder2(TreeNode *root) {
+	vector<vector<int> > res;
 	if(!root) return res;
 	queue<TreeNode*> q;
 	q.push(root);
@@ -97,8 +97,8 @@ vector<vector<int>> zigzagLevelOrder2(TreeNode *root) {
 Runtime: 4ms, 47.54%faster.
 */
 //method3
-vector<vector<int>> zigzagLevelOrder3(TreeNode *root) {
-	vector<vector<int>> res;
+vector<vector<int> > zigzagLevelOrder3(TreeNode *root) {
+	vector<vector<int> > res;
 	if(!root) return res;
 	queue<TreeNode*> q;
 	q.push(root);

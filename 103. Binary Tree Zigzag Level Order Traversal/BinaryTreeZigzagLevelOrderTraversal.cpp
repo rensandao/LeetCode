@@ -105,19 +105,17 @@ vector<vector<int>> zigzagLevelOrder3(TreeNode *root) {
 	
     while (!q.empty()) {
         vector<int> levelVec;
-        
-        int vLength = q.size();
-        for (int i=0; i<vLength; i++) {
-            TreeNode *temp = q.front();
-            q.pop();
-            
-            levelVec.push_back(temp->val);
-            
-            if (temp->left)  q.push(temp->left);
-            if (temp->right)  q.push(temp->right);
+		int vLength = q.size();
+		for (int i=0; i<vLength; i++) {
+			TreeNode *temp = q.front();
+			q.pop();
+			levelVec.push_back(temp->val);
+
+			if (temp->left)  q.push(temp->left);
+			if (temp->right)  q.push(temp->right);
         }
-        if(isLR) reverse(levelVec.begin(), levelVec.end()); //隔一层的vector先反转，再压入大vector中。
-        res.push_back(levelVec);
+		if(isLR) reverse(levelVec.begin(), levelVec.end()); //隔一层的vector先反转，再压入大vector中。
+		res.push_back(levelVec);
 		isLR = !isLR; //每一层结束，标志取反。		
     }	
     return res; 

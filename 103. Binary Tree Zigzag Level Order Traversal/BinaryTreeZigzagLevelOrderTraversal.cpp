@@ -37,7 +37,7 @@ vector<vector<int>> zigzagLevelOrder1(TreeNode *root) {
 
 void FindLevelOrder(TreeNode *node, int level, vector<vector<int>> &res) {
 	if (res.size() < level)  res.emplace_back(vector<int>());
-	if (level%2 ==1) {
+	if (level%2 == 1) {
 		res[level-1].emplace_back(node->val); 
 	} else {
 		res[level-1].insert(res[level-1].begin(), node->val);            

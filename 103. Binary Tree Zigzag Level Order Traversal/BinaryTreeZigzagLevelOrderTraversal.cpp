@@ -97,14 +97,14 @@ Runtime: 4ms, 47.54%faster.
 */
 //method3
 vector<vector<int>> zigzagLevelOrder3(TreeNode *root) {
-    vector<vector<int>> res;
-    if(!root) return res;
-    queue<TreeNode*> q;
-    q.push(root);
+	vector<vector<int>> res;
+	if(!root) return res;
+	queue<TreeNode*> q;
+	q.push(root);
 	bool isLR = false;  //在这里设置标志
 	
-    while (!q.empty()) {
-        vector<int> levelVec;
+	while (!q.empty()) {
+		vector<int> levelVec;
 		int vLength = q.size();
 		for (int i=0; i<vLength; i++) {
 			TreeNode *temp = q.front();
@@ -113,11 +113,11 @@ vector<vector<int>> zigzagLevelOrder3(TreeNode *root) {
 
 			if (temp->left)  q.push(temp->left);
 			if (temp->right)  q.push(temp->right);
-        }
+		}
 		if(isLR) reverse(levelVec.begin(), levelVec.end()); //隔一层的vector先反转，再压入大vector中。
 		res.push_back(levelVec);
 		isLR = !isLR; //每一层结束，标志取反。		
-    }	
+	}	
     return res; 
 }
 

@@ -35,9 +35,9 @@ struct TreeNode {
 */
 //Iteration mind. Binary tree level order tarversal.
 //method1
-vector<vector<int>> levelOrderBottom1(TreeNode *root) {
+vector<vector<int> > levelOrderBottom1(TreeNode *root) {
         if(!root) return {};
-        vector<vector<int>> res;
+        vector<vector<int> > res;
         queue<TreeNode*> q;
         q.push(root);	
 
@@ -70,9 +70,9 @@ vector<vector<int>> levelOrderBottom1(TreeNode *root) {
  */
 //recusive mind.
 //method2
-vector<vector<int>> levelOrderBottom(TreeNode *root) {
+vector<vector<int> > levelOrderBottom(TreeNode *root) {
 	if (!root)  return {};
-	vector<vector<int>> res;
+	vector<vector<int> > res;
 	if (root)  FindLevelOrder(root, 1, res);
 	reverse(res.begin(), res.end());
 	return res;

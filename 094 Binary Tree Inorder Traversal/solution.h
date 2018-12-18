@@ -58,6 +58,8 @@ morris算法类似于线索二叉树。利用结点指针，解决前驱结点�
 	b. 前驱结点的右孩子不为空（说明已经建立连接了），则右孩子设置为空（恢复了二叉树原貌），当前结点更新为当前结点的右孩子结点。
 3.如此循环。
 
+Reference:
+https://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html
 */
 
 class Solution2 {
@@ -65,6 +67,9 @@ public:
     vector<int> inorderTraversal(TreeNode *root) {
         vector<int> res;
         TreeNode *cur = root, *prev = NULL;
+		
+		while (cur) {
+		}
 				
         
         

@@ -79,6 +79,7 @@ vector<int> preorderTraversal2(TreeNode* root) {
 	return res;
 }
 
+//method3 morris算法
 
 //create binary tree by tranfering value
 TreeNode* CreateBiTree(){   

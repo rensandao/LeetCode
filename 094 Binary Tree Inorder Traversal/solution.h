@@ -68,12 +68,25 @@ public:
         vector<int> res;
         TreeNode *cur = root, *prev = NULL;
 		
-		while (cur) {
-		}
+		while (cur != NULL) {
+			if (cur->left == NULL) {
+				res.push_back(cur->val);
+				cur = cur->right;				
+			} else {
+				prev = cur->left;
+				while ( prev->right != NULL && prev->right != cur) 
+					prev = prev->right;
 				
-        
-        
-            
+				if (prev->right == NULL) {
+					prev->right = cur;
+					cur = cur->left;
+				} else {
+					prev->right = NULL;
+					res.push_back(cur->val);
+					cur = cur->right;		
+				}
+			}
+		}           
         return res;   
     }
 };

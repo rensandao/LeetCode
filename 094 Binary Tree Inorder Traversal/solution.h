@@ -61,7 +61,7 @@ morris算法类似于线索二叉树。利用结点指针，解决前驱结点�
 Reference:
 https://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html
 */
-
+//mehtod2. inorder traversal using morris algorithm.
 class Solution2 {
 public:
     vector<int> inorderTraversal(TreeNode *root) {

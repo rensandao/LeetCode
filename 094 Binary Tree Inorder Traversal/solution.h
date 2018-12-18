@@ -20,7 +20,8 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
  
-class Solution {
+//用栈
+class Solution1 {
 public:
     vector<int> inorderTraversal(TreeNode *root) {
         vector<int> res;
@@ -40,6 +41,20 @@ public:
                 temp = temp->right;            
             }           
         }     
+        return res;   
+    }
+};
+
+//Morris算法
+class Solution2 {
+public:
+    vector<int> inorderTraversal(TreeNode *root) {
+        vector<int> res;
+        TreeNode *cur = root, *prev = NULL;
+				
+        
+        
+            
         return res;   
     }
 };

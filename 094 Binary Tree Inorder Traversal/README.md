@@ -36,10 +36,13 @@
 		为空，则取栈顶指针，保存数据。再弹出栈顶。当前结点更新为右结点。
 
 	
+2. 用Morris算法	
+	
 	
 	
 
 ### 代码
-1. 用栈，见[solution.h](https://github.com/rensandao/LeetCode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal/solution.h)
+1. 见[solution.h](https://github.com/rensandao/LeetCode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal/solution.h)
 
 ### 知识点
+* morris算法

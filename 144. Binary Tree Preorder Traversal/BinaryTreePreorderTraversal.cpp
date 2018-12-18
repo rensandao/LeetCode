@@ -84,6 +84,14 @@ vector<int> preorderTraversal2(TreeNode* root) {
 思路3：
 
 */
+vector<int> preorderTraversal2(TreeNode* root) {
+	vector<int> res;
+	stack<TreeNode*> st;
+	TreeNode *temp = root;
+	
+		
+	return res;
+}
 
 
 

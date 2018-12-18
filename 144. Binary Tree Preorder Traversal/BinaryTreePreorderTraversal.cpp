@@ -84,10 +84,8 @@ vector<int> preorderTraversal2(TreeNode* root) {
 思路3：
 
 */
-vector<int> preorderTraversal2(TreeNode* root) {
+vector<int> preorderTraversal3(TreeNode* root) {
 	vector<int> res;
-		
-	return res;
 }
 
 

@@ -1,4 +1,4 @@
-### 记录刷题方法论
+### 刷题记录
 
 * 181106 Day1
 
@@ -141,8 +141,11 @@
   * 181219
   
   	[144 二叉树前序遍历morris实现](https://github.com/rensandao/LeetCode/blob/master/144.%20Binary%20Tree%20Preorder%20Traversal/BinaryTreePreorderTraversal.cpp)
- 	
+	
+ 	Attention： 敲代码出错查半天，其实是程序中 ‘=’ 写成‘==’
+	
 	知识点： [NULL与nullptr的区别](https://www.cnblogs.com/malecrab/p/5569707.html)
+	
   * 181220
   
   

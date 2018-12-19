@@ -46,4 +46,4 @@
 
 ### 知识点
 * morris算法
-	[参考1](http://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html)    [参考2](https://www.jianshu.com/p/484f587c967c)
+	[参考1](http://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html)    [参考2](https://www.jianshu.com/p/484f587c967c)   [参考3](https://stackoverflow.com/questions/6478063/how-is-the-time-complexity-of-morris-traversal-on)

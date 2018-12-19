@@ -83,7 +83,7 @@ vector<int> preorderTraversal2(TreeNode* root) {
 /*
 181219
 思路3： morris算法
-
+可参考中序遍历morris算法思路分析【094题】，这里变动一个位置就可以。
 */
 //method3,using morris algorithm. Space complexity： O(1)
 

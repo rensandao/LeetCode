@@ -1,3 +1,8 @@
+/****************************************************************
+source: https://github.com/rensandao/LeetCode/edit/master/100.%20Same%20Tree/SameTree.cpp
+Author: rensandao
+First Creation: 2018-12-19
+****************************************************************/ 
 #include <vector>
 using std::vector;
 
@@ -9,8 +14,8 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
  
-
 /*
+181219
 思路1： 双栈。
 怎么分析？
 数据结构用什么？
@@ -19,7 +24,7 @@ struct TreeNode {
 空间复杂度：
 Runtime:4ms
 */
-//are two trees same?
+//Same Tree
 //method1. 
 bool isSameTree1(TreeNode* p, TreeNode* q) {
 	stack<TreeNode*> st1, st2;
@@ -45,10 +50,11 @@ bool isSameTree1(TreeNode* p, TreeNode* q) {
 }
 
 /*
+181219
 思路2：递归。
 判断条件严谨是重点。
 */
-//method2
+//method2.
 bool isSameTree2(TreeNode *p, TreeNode *q) {
 	if(!p && !q) return true;  
 	if(!p || !q) return false;  

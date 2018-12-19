@@ -79,12 +79,17 @@ vector<int> preorderTraversal2(TreeNode* root) {
 	return res;
 }
 
-//method3 morris算法
+
 /*
-思路3：
+181219
+思路3： morris算法
 
 */
+//method3,using morris algorithm. Space complexity： O(1)
 vector<int> preorderTraversal3(TreeNode* root) {
+	
+	
+	
 	vector<int> res;
 }
 

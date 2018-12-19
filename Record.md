@@ -146,6 +146,10 @@
 	
 	知识点： [NULL与nullptr的区别](https://www.cnblogs.com/malecrab/p/5569707.html)
 	
+	morris后序遍历和99题未理清楚。
+	
+	[100 Same Tree](https://github.com/rensandao/LeetCode/blob/master/100.%20Same%20Tree/solution.h)
+	
   * 181220
   
   

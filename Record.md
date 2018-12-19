@@ -134,7 +134,15 @@
 	2. 对103题一直不能AC的method2修改为：将while()内部的static 变量改为，放到while()循环体外面的全局变量，其他不变，可以AC。
   
   * 181218
+  
+  	[099 Recover Binary Tree] 利用morris没有理解清楚，如何在morris算法进行数据的交换。重新做了morris方法，重做了[094 中序遍历morris实现](https://github.com/rensandao/LeetCode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal/solution.h)
+	
+	
   * 181219
+  
+  	[144 二叉树前序遍历morris实现](https://github.com/rensandao/LeetCode/blob/master/144.%20Binary%20Tree%20Preorder%20Traversal/BinaryTreePreorderTraversal.cpp)
+ 	
+	知识点： [NULL与nullptr的区别](https://www.cnblogs.com/malecrab/p/5569707.html)
   * 181220
   
   

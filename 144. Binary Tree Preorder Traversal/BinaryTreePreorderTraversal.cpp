@@ -86,13 +86,34 @@ vector<int> preorderTraversal2(TreeNode* root) {
 
 */
 //method3,using morris algorithm. Space complexity： O(1)
-vector<int> preorderTraversal3(TreeNode* root) {
-	
-	
-	
-	vector<int> res;
-}
 
+vector<int> preorderTraversal3(TreeNode *root) {
+	vector<int> res;
+	TreeNode *curNode = root, *prevNode = nullptr;
+
+	while (curNode != nullptr) {
+		if (curNode->left == nullptr) {
+			res.push_back(curNode->val);
+			curNode = curNode->right;                
+		} else {
+			prevNode = curNode->left;
+
+			while (prevNode->right != nullptr && prevNode->right != curNode) {
+				prevNode = prevNode->right;
+			}
+			if (prevNode->right == nullptr) {
+				res.push_back(curNode->val); //先序遍历情况
+				prevNode->right = curNode;
+				curNode = curNode->left;                    
+			} else {
+				prevNode->right = nullptr;
+				//res.push_back(curNode->val) 中序遍历情况
+				curNode = curNode->right;   
+			}                            
+		}            
+	}
+	return res;
+}
 
 
 //create binary tree by tranfering value

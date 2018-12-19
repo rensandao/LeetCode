@@ -65,7 +65,7 @@ https://www.jianshu.com/p/484f587c967c
 //mehtod2. inorder traversal using morris algorithm.
 class Solution2 {
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
+    vector<int> inorderTraversal(TreeNode *root) {
         vector<int> res;
         TreeNode *current = root , *prevNode = NULL;
         

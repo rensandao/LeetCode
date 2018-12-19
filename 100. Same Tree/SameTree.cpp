@@ -3,9 +3,6 @@ source: https://github.com/rensandao/LeetCode/edit/master/100.%20Same%20Tree/Sam
 Author: rensandao
 First Creation: 2018-12-19
 ****************************************************************/ 
-#include <vector>
-using std::vector;
-
 //Definition for a binary tree node.
 struct TreeNode {
     int val;

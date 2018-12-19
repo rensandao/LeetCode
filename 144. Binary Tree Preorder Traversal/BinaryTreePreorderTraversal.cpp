@@ -59,6 +59,8 @@ vector<int> preorderTraversalM1(TreeNode* root) {
 			取上上个结点，再更新当前结点为其右孩子
 
 分析：已经保存的数据仍会被压入栈中，然后在出栈。 
+
+时间复杂度： O（n)  空间复杂度：O(n)
 */
 vector<int> preorderTraversal2(TreeNode* root) {
 	vector<int> res;
@@ -84,6 +86,7 @@ vector<int> preorderTraversal2(TreeNode* root) {
 181219
 思路3： morris算法
 可参考中序遍历morris算法思路分析【094题】，这里变动一个位置就可以。
+时间复杂度： O（n)  空间复杂度：O(1)
 */
 //method3,using morris algorithm. Space complexity： O(1)
 

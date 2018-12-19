@@ -45,4 +45,4 @@
 1. 见[solution.h](https://github.com/rensandao/LeetCode/blob/master/094%20Binary%20Tree%20Inorder%20Traversal/solution.h)
 
 ### 知识点
-* morris算法
+* morris算法[参考1](http://www.cnblogs.com/AnnieKim/archive/2013/06/15/MorrisTraversal.html) [参考2]（https://www.jianshu.com/p/484f587c967c）

@@ -21,13 +21,20 @@ public:
 即任意结点的两个子树的高度差不超过1.
 
 辅助高度记录L1,L2。
+
 */
     bool isBalanced(TreeNodeb *root) {
        return isBalancedHelp(root) >= 0;
        
     }
 	
-	int isBalancedHelp( TreeNode *root)
-	
-	
+	int isBalancedHelp( TreeNode *root) {
+		if (!root) return 0;
+		int L = isBalancedHelp(root->left);
+		int R = isBalancedHelp(root->right);
+		
+		if (L<0 || R<0 || abs(L-R)>1)  return -1;
+		
+		return max(L,R)+1;
+	}
 };

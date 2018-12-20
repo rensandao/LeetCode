@@ -146,12 +146,19 @@
 	
 	知识点： [NULL与nullptr的区别](https://www.cnblogs.com/malecrab/p/5569707.html)
 	
-	morris后序遍历和99题未理清楚。
+	morris后序遍历和99题未理清楚。??
 	
 	[100 Same Tree](https://github.com/rensandao/LeetCode/blob/master/100.%20Same%20Tree/solution.h)
 	
   * 181220
-  
+   
+    [101 Symmetric Tree](https://github.com/rensandao/LeetCode/blob/master/101.%20Symmetric%20Tree/SymmetricTree.cpp)递归和迭代两条思路，其中迭代循环可以利用栈或队列或双栈或双队列。
+	
+	100题和101题都用递归和迭代两种思路。关键要知道怎么找到`最小问题核`并解答。
+	
+	[110 Balanced Binary Tree](https://github.com/rensandao/LeetCode/blob/master/110.%20Balanced%20Binary%20Tree/BalancedBinaryTree.cpp)
+  	
+	110题没有一下子想出来。因为找不到递归的`最小问题核`。
   
   
   

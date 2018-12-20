@@ -28,7 +28,7 @@ public:
 2）对应的结点的确定，源头是从根节点root开始，root到第二层root->left和root->right,但是实际第二层并不能满足这个【问题核】的要素，必要要考虑第三层，
 在第二层到第三层之间，一个结点有两个子结点，这才有了普遍性，可利用性。也就是问题核的解的重利用-递归。
 
-判断对不对称所有的可能性。
+判断对不对称所有的可能性:
 	a.root-left.val == root->right.val,
 	b.left和right如果都为空，但因为没有结点数据不用比较数值，则继续；
 	c.left和right如果有一个不为空，则说明不对称，返回false。
@@ -38,9 +38,9 @@ public:
 	//recursive
     bool isSymmetric(TreeNode *root) {
         
-        if(!root)  return true;
-        if(!root->left && !root->right)  return true;
-        if(!root->left || !root->right)  return false;
+        if (!root)  return true;
+        if (!root->left && !root->right)  return true;
+        if (!root->left || !root->right)  return false;
         
         return isSymmetricHelp(root->left, root->right);            
     }

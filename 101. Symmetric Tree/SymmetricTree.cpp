@@ -84,7 +84,7 @@ public:
     }
 
 /*
-思路2.2： 迭代。采用单queue或双queue。对二叉树进行层序遍历比较（即BFS）。整体思路与采用双栈相似。
+思路2.2： 迭代。采用单queue或双queue。对二叉树进行层序遍历比较（即BFS）。整体思路与采用双栈相似。可参考repo：
 Reference: 
 https://github.com/haoel/leetcode/blob/master/algorithms/cpp/symmetricTree/symmetricTree.cpp
 */	

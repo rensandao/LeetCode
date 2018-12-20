@@ -26,7 +26,7 @@ Runtime:4ms
 */
 //Same Tree
 //method1. 
-bool isSameTree1(TreeNode* p, TreeNode* q) {
+bool isSameTree1(TreeNode *p, TreeNode *q) {
 	stack<TreeNode*> st1, st2;
 	st1.push(p); st2.push(q);
 
@@ -58,5 +58,5 @@ bool isSameTree1(TreeNode* p, TreeNode* q) {
 bool isSameTree2(TreeNode *p, TreeNode *q) {
 	if(!p && !q) return true;  
 	if(!p || !q) return false;  
-	return (p->val == q->val) && isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
+	return (p->val == q->val) && isSameTree2(p->left, q->left) && isSameTree2(p->right, q->right);
 }

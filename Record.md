@@ -158,7 +158,7 @@
 	
 	[110 Balanced Binary Tree](https://github.com/rensandao/LeetCode/blob/master/110.%20Balanced%20Binary%20Tree/BalancedBinaryTree.cpp)
   	
-	110题一时半会写不出来。因为找不到递归的`最小问题核`。这几题目
+	110题一时半会写不出来。因为找不到递归的`最小问题核`。近期可以针对递归和迭代的一些题目做一些思路整理。
   
   
   

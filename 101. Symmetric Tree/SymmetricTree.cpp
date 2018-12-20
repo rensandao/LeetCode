@@ -56,13 +56,37 @@ public:
 	
 /*
 181220
-思路2：迭代。
-
+思路2.1：迭代。采用单栈或双栈。思路分析参考思路1中的分析点。仍需要注意的是判断不对称的条件的严谨性。
 */
 	//iterative
 	bool isSymmetric2(TreeNode *root) {
-	
-	
-	}
+        stack<TreeNode*> st1, st2;
+        
+        if (!root) return true;
+        if (!root->left && !root->right)  return true;
+        
+        st1.push(root->left);
+        st2.push(root->right);
+        
+        while (!st1.empty() && !st2.empty()) {
+            TreeNode *node1, *node2;
+            node1 = st1.top();  st1.pop();
+            node2 = st2.top();  st2.pop();
+            
+            if (!node1 && !node2)  continue;
+            if (!node1 || !node2)  return false;
+			
+            if (node1->val != node2->val)  return false;
+            st1.push(node1->left);  st1.push(node1->right);
+            st2.push(node2->right);  st2.push(node2->left);
+        }
+        return true;
+    }
+
+/*
+思路2.2： 迭代。采用单queue或双queue。对二叉树进行层序遍历比较（即BFS）。整体思路与采用双栈相似。
+Reference: 
+https://github.com/haoel/leetcode/blob/master/algorithms/cpp/symmetricTree/symmetricTree.cpp
+*/	
 	
 };

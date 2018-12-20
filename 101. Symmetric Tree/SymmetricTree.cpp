@@ -35,7 +35,7 @@ public:
 	d.剩下的是有结点数据的情况，判断a条件成不成立，如果不成立，则返回false；如果成立，则返回true，这个时候开始要进入下一层各自的对称结点，
 	考虑使用递归调用了。
 */
-	//recursive
+	//recursive. Runtime: 4ms
     bool isSymmetric(TreeNode *root) {
         
         if (!root)  return true;
@@ -58,7 +58,7 @@ public:
 181220
 思路2.1：迭代。采用单栈或双栈,DFS遍历。思路分析参考思路1中的分析点。仍需要注意的是判断不对称的条件的严谨性。
 */
-	//iterative
+	//iterative. Runtime: 8ms
 	bool isSymmetric2(TreeNode *root) {
         stack<TreeNode*> st1, st2;
         

@@ -22,8 +22,12 @@ public:
 
 辅助高度记录L1,L2。
 */
-    bool isBalanced(TreeNode* root) {
-       
+    bool isBalanced(TreeNodeb *root) {
+       return isBalancedHelp(root) >= 0;
        
     }
+	
+	int isBalancedHelp( TreeNode *root)
+	
+	
 };

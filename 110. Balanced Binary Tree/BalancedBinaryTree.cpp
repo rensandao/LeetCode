@@ -54,7 +54,7 @@ public:
 private:	   		   
     int nodeDepth(TreeNode *root) {
 		if (!root) return 0;
-		return 1 + max(nodeDepth(root->left), nodeDepth(root->right));
+		
 	}	   
 };	   
 		   

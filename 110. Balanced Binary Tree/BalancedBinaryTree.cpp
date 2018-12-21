@@ -11,9 +11,6 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-class Solution {
-public:
-
 /*
 181220
 思路1：递归。
@@ -27,14 +24,37 @@ public:
 Runtime:
 
 */
+class Solution1 {
+public:
     bool isBalanced(TreeNodeb *root) {
        if(!root) return true;
 	   if (abs(nodeDepth(root->left) - nodeDepth(root->right) >1) return false;
 	   return isBalanced(root->left) && isBalanced(root->right);       
     }
-	
+private:	   		   
     int nodeDepth(TreeNode *root) {
 		if (!root) return 0;
 		return 1 + max(nodeDepth(root->left), nodeDepth(root->right));
-	}
+	}	   
 };
+
+           
+/*
+181221
+思路2：对思路1递归方法的改进
+
+*/	
+class Solution2 {
+public:
+    bool isBalanced(TreeNodeb *root) {
+       if(!root) return true;
+	   if (abs(nodeDepth(root->left) - nodeDepth(root->right) >1) return false;
+	   return isBalanced(root->left) && isBalanced(root->right);       
+    }
+private:	   		   
+    int nodeDepth(TreeNode *root) {
+		if (!root) return 0;
+		return 1 + max(nodeDepth(root->left), nodeDepth(root->right));
+	}	   
+};	   
+		   

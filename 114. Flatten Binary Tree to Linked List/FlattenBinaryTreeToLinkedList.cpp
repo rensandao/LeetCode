@@ -1,7 +1,7 @@
 /**************************************************
 Source:
 Author: rensandao
-First Creation: 2018-12-20
+First Creation: 2018-12-22
 ***************************************************/
 //Definition for a binary tree node.
 struct TreeNode {
@@ -15,5 +15,6 @@ class Solution {
 public:
     void flatten(TreeNode* root) {
         
+		
     }
 };

@@ -24,17 +24,13 @@ public:
 
 */
     bool isBalanced(TreeNodeb *root) {
-       return isBalancedHelp(root) >= 0;
-       
+       if(!root) return true;
+	   if (abs(nodeDepth(root->left) - nodeDepth(root->right) >1) return false;
+	   return isBalanced(root->left) && isBalanced(root->right);       
     }
 	
-	int isBalancedHelp( TreeNode *root) {
+    int nodeDepth(TreeNode *root) {
 		if (!root) return 0;
-		int L = isBalancedHelp(root->left);
-		int R = isBalancedHelp(root->right);
-		
-		if (L<0 || R<0 || abs(L-R)>1)  return -1;
-		
-		return max(L,R)+1;
+		return 1 + max(nodeDepth(root->left), nodeDepth(root->right));
 	}
 };

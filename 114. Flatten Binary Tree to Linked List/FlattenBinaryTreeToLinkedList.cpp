@@ -54,7 +54,8 @@ struct TreeNode {
 												                             \                \
 													                          6				   6			
                                                      
-
+3）这让我想到了morris算法。
+4）不过，需要注意的是步骤2）中的嫁接操作的顺序，也可以有多种方式。这会决定算法的一些变动。
 */
 class Solution {
 public:

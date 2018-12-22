@@ -11,6 +11,13 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
+/*
+181222
+思路1：类Morris。
+
+
+
+*/
 class Solution {
 public:
     void flatten(TreeNode* root) {

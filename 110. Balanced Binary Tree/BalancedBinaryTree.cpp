@@ -26,16 +26,16 @@ Runtime:
 */
 class Solution1 {
 public:
-    bool isBalanced(TreeNodeb *root) {
+    bool isBalanced(TreeNode *root) {
        if(!root) return true;
-	   if (abs(nodeDepth(root->left) - nodeDepth(root->right) >1) return false;
+	   if (abs(nodeDepth(root->left) - nodeDepth(root->right))>1) return false;
 	   return isBalanced(root->left) && isBalanced(root->right);       
     }
 private:	   		   
     int nodeDepth(TreeNode *root) {
 		if (!root) return 0;
 		return 1 + max(nodeDepth(root->left), nodeDepth(root->right));
-	}	   
+	}  
 };
 
            
@@ -46,9 +46,9 @@ private:
 */	
 class Solution2 {
 public:
-    bool isBalanced(TreeNodeb *root) {
+    bool isBalanced(TreeNode *root) {
        if(!root) return true;
-	   if (abs(nodeDepth(root->left) - nodeDepth(root->right) >1) return false;
+	   if (abs(nodeDepth(root->left) - nodeDepth(root->right)) >1) return false;
 	   return isBalanced(root->left) && isBalanced(root->right);       
     }
 private:	   		   

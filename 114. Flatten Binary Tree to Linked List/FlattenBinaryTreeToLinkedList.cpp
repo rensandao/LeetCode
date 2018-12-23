@@ -62,7 +62,7 @@ Runtime: 8ms, 53.80% faster.
 //method1. Flatten binary tree to linked list tree iteratively.
 class Solution1 {
 public:
-    void flatten(TreeNode* root) {
+    void flatten(TreeNode *root) {
         TreeNode *curNode = root, *preNode;
         while (curNode != nullptr) {
             if (curNode->left == nullptr) {
@@ -99,7 +99,7 @@ Runtime: 12ms. 18.72% faster.
 //method2. 
 class Solution2 {
 public:
-    void flatten(TreeNode* root) { 
+    void flatten(TreeNode *root) { 
         if (!root) return;
         vector<TreeNode*> vec;
         stack<TreeNode*> st;

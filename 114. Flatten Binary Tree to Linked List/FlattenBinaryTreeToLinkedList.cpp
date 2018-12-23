@@ -60,7 +60,7 @@ struct TreeNode {
 Runtime: 8ms, 53.80% faster.
 */
 //method1. Flatten binary tree to linked list tree iteratively.
-class Solution {
+class Solution1 {
 public:
     void flatten(TreeNode* root) {
         TreeNode *curNode = root, *preNode;
@@ -97,7 +97,7 @@ public:
 Runtime: 12ms. 18.72% faster.
 */
 //method2. 
-class Solution {
+class Solution2 {
 public:
     void flatten(TreeNode* root) { 
         if (!root) return;
@@ -128,6 +128,14 @@ public:
 181222
 思路3：递归思想，八字形。找到最小的[问题核]，一般分析到第3层。
 */
+class Solution3 {
+public:
+    void flatten(TreeNode *root) { 
+        
+        
+        
+    }
+};
 
 
 

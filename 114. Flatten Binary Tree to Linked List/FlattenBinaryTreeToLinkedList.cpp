@@ -131,9 +131,17 @@ public:
 class Solution3 {
 public:
     void flatten(TreeNode *root) { 
-        
-        
-        
+        if (!root)  return;
+		flatten(root->left);
+		flatten(root->right);
+		
+		if (!root->left)  return;
+		TreeNode *temp = root->left;
+		while (temp->right != nullptr)  temp = temp->right;
+		
+		temp->right = root->right;
+		root->right = root->left;
+		root->left = null;
     }
 };
 

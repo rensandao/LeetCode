@@ -139,7 +139,7 @@ public:
 		flatten(root->left);
 		flatten(root->right);
 		
-		if (!root->left)  return;
+		if (!root->left)  return;  //caution
 		TreeNode *temp = root->left;
 		while (temp->right != nullptr)  temp = temp->right;
 		

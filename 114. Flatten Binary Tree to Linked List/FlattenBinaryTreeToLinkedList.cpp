@@ -93,7 +93,7 @@ public:
 3   4   6            
 
 时间复杂度：
-空间复杂度：O(n+logn)
+空间复杂度：
 Runtime: 12ms. 18.72% faster.
 */
 //method2. 

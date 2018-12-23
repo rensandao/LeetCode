@@ -83,15 +83,46 @@ public:
 /*
 181222
 思路2：对称思维
-因为是先序遍历，那考虑方便，直接全部放在坐边。最后再统一换到右结点。
+因为是先序遍历，那考虑方便，直接全部放在坐边。最后再统一换到右结点。实现方法利用stack先序遍历，存放各个结点指针到vector中，再统一更换关系。
+但明显，这里既用到stack，又有vector。
 
-  	1
-   / \
-  2   5
- / \   \
-3   4   6
+  	1                    
+   / \                 
+  2   5         =>     1-2-3-4-5-6       
+ / \   \              
+3   4   6            
 
+时间复杂度：
+空间复杂度：O(n+logn)
+Runtime: 12ms. 18.72% faster.
 */
+//method2. 
+class Solution {
+public:
+    void flatten(TreeNode* root) { 
+        if (!root) return;
+        vector<TreeNode*> vec;
+        stack<TreeNode*> st;
+        st.push(root);
+        
+        while (!st.empty()) {
+            TreeNode *temp = st.top();
+            st.pop();
+            vec.push_back(temp);
+            
+            if (temp->right)  st.push(temp->right);
+            if (temp->left)  st.push(temp->left);           
+        }  
+        
+        vec.push_back(nullptr);
+        for (int i=0; i<vec.size(); i++) {
+            if(vec[i]) {
+                vec[i]->right = vec[i+1];
+                vec[i]->left = nullptr;                
+            }       
+        }
+    }
+};
 
 /*
 181222

@@ -55,8 +55,8 @@ struct TreeNode {
                                                      
 3）这让我想到了前序遍历morris算法思想，可以应用其代码逻辑结构。不过这里写出来会简单些。
 
-时间复杂度：
-空间复杂度：
+时间复杂度：O(n)
+空间复杂度：O(1)
 Runtime: 8ms, 53.80% faster.
 */
 //method1. Flatten binary tree to linked list tree iteratively.

@@ -149,6 +149,15 @@ public:
     }
 };
 
+/*思路4：递归
 
+
+*/
+class Solution4 {
+public:
+    void flatten(TreeNode *root) { 
+      
+    }
+};
 
 

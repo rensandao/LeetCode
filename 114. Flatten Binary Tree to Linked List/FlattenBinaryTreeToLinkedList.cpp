@@ -82,7 +82,7 @@ public:
 
 /*
 181223
-思路2：对称思维
+思路2：对称思维,属于迭代。
 因为是先序遍历，那考虑方便，直接全部放在坐边。最后再统一换到右结点。实现方法利用stack先序遍历，存放各个结点指针到vector中，再统一更换关系。
 但明显，这里既用到stack，又有vector。
 
@@ -164,15 +164,27 @@ public:
 
 /*
 181224
-思路5：对思路3的改进，也属于迭代。参考PDF，https://github.com/soulmachine/leetcode
+思路5：对思路2的改进，也属于迭代。参考PDF，https://github.com/soulmachine/leetcode
 思路3中利用栈进行先序遍历，遍历的结点指针存在专门的容器内，再统一操作。
 这里可以巧妙利用栈的进出，来实现。
 */
-class Solution4 {
+class Solution5 {
 public:
     void flatten(TreeNode *root) { 
-    	
+        if (!root) return;
+        stack<TreeNode*> st;
+        st.push(root);
+        
+        while (!st.empty()) {
+            TreeNode *temp = st.top();
+            st.pop();
+                      
+            if (temp->right)  st.push(temp->right);
+            if (temp->left)  st.push(temp->left);  
 			
+			temp->left = nullptr;
+			while(!st.empty()) 	temp->right = st.top();  //condition
+        }  
     }
 };
 

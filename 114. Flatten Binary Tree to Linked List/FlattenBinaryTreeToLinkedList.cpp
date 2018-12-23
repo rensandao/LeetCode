@@ -141,7 +141,7 @@ public:
 		
 		temp->right = root->right;
 		root->right = root->left;
-		root->left = null;
+		root->left = nullptr;
     }
 };
 

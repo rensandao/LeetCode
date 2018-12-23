@@ -89,7 +89,6 @@ vector<int> preorderTraversal2(TreeNode* root) {
 时间复杂度： O（n)  空间复杂度：O(1)
 */
 //method3,using morris algorithm. Space complexity： O(1)
-
 vector<int> preorderTraversal3(TreeNode *root) {
 	vector<int> res;
 	TreeNode *curNode = root, *prevNode = nullptr;

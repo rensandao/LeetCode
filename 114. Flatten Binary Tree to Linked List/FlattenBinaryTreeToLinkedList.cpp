@@ -151,12 +151,15 @@ public:
 
 /*思路4：递归
 
-
+TC:
+SC:
+Runtime:
 */
 class Solution4 {
 public:
     void flatten(TreeNode *root) { 
       
+		
     }
 };
 

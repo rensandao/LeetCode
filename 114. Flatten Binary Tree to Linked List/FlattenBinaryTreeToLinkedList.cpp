@@ -59,7 +59,7 @@ struct TreeNode {
 空间复杂度：
 Runtime: 8ms, 53.80% faster.
 */
-//
+//method1. Flatten binary tree to linked list tree iteratively.
 class Solution {
 public:
     void flatten(TreeNode* root) {

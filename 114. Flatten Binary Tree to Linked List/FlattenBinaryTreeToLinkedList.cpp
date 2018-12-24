@@ -165,8 +165,8 @@ public:
 /*
 181224
 思路5：对思路2的改进，也属于迭代。参考PDF，https://github.com/soulmachine/leetcode
-思路3中利用栈进行先序遍历，遍历的结点指针存在专门的容器内，再统一操作。
-这里可以巧妙利用栈的进出，来实现。
+思路3中利用栈进行先序遍历，遍历的结点指针存在专门的容器内，再统一一次性操作。
+这里可以巧妙利用栈的进出，在遍历过程中实现变换。
 */
 class Solution5 {
 public:
@@ -182,6 +182,7 @@ public:
             if (temp->right)  st.push(temp->right);
             if (temp->left)  st.push(temp->left);  
 			
+			//下面两行代码很巧妙，避免使用方法2中的vector
 			temp->left = nullptr;
 			while(!st.empty()) 	temp->right = st.top();  //condition
         }  

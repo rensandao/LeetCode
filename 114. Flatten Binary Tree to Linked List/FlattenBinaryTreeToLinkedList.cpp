@@ -168,11 +168,11 @@ Runtime: 12ms, 同上。
 class Solution4 {
 public:
     void flatten(TreeNode *root) { 
-        if (!root)  return;
+        if (!root)  return;    //layer1->2
 		flatten(root->left);
 		flatten(root->right);
 		
-		if (!root->left)  return;  //caution
+		if (!root->left)  return;  //caution. layer2->3
 		TreeNode *temp = root->left;
 		while (temp->right != nullptr)  temp = temp->right;
 		
@@ -181,6 +181,7 @@ public:
 		root->left = nullptr;
     }
 };
+
 
 /**************************************************************************************************************************************
 181224
@@ -196,9 +197,4 @@ public:
 		
     }
 };
-
-
-
-
-
 

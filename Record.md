@@ -165,8 +165,13 @@
 	de
 	
   * 181222 周六 小雨 考研日 冬至
-  
+    
+	[114]( https://github.com/rensandao/LeetCode/blob/master/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List/FlattenBinaryTreeToLinkedList.cpp)
+	 
   * 181223
+  	
+	第114题的方法补充
+  
   * 181223
   * 181224
   * 181225

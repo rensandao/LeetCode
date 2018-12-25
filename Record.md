@@ -166,15 +166,23 @@
 	
   * 181222 周六 小雨 考研日 冬至
     
-	[114]( https://github.com/rensandao/LeetCode/blob/master/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List/FlattenBinaryTreeToLinkedList.cpp)
+	[114. Flatten Binary Tree to Linked List]( https://github.com/rensandao/LeetCode/blob/master/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List/FlattenBinaryTreeToLinkedList.cpp)
 	 
   * 181223
   	
-	第114题的方法补充
+	第114题的方法补充。
+	
+	
   
-  * 181223
   * 181224
+  
+    [117. Populating Next Right Pointers in Each Node II](https://github.com/rensandao/LeetCode/blob/master/117.%20Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II/PopulatingNextRightPointersInEachNodeII.cpp) 没有找到其突破口，看参考代码暂未理解。
+    
   * 181225
+  
+     117题仍未解出。又看了105题。
+  
+  * 181226
   
   
   

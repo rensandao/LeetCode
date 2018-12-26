@@ -1,3 +1,4 @@
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,7 +7,12 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
+ /*
+ 181226
+ 思路：
  
+ */
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {

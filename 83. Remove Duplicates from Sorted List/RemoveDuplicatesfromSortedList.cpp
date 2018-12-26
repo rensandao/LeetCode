@@ -20,6 +20,8 @@ First Creation: 2018-12-26
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        
+		ListNode *res;
+        while(
+		
     }
 };

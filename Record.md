@@ -92,17 +92,14 @@
   第094中序遍历 用栈，思路分析与参看代码；第145后序遍历思路分析。开始暴做，是很难有参考思路的。前中后序的操作的都不同。
   
 * 181211
-
   第145后序遍历代码。
   
 * 181211
-
   145思路1-2-3
   
 * 181212
 
 * 181213
-
   [145. Binary Tree Postorder Traversal 用栈的方法，4种方式。](https://github.com/rensandao/LeetCode/blob/master/145.%20Binary%20Tree%20Postorder%20Traversal/solution.h)
   
  * 181214  晴
@@ -161,21 +158,15 @@
 	110题一时半会写不出来。因为找不到递归的`最小问题核`。近期可以针对`递归和迭代`的一些题目做一些思路整理。
   
   * 181221 
-  	
 	de
 	
   * 181222 周六 小雨 考研日 冬至
-    
 	[114. Flatten Binary Tree to Linked List]( https://github.com/rensandao/LeetCode/blob/master/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List/FlattenBinaryTreeToLinkedList.cpp)
 	 
   * 181223
-  	
 	第114题的方法补充。
-	
-	
-  
+
   * 181224
-  
     [117. Populating Next Right Pointers in Each Node II](https://github.com/rensandao/LeetCode/blob/master/117.%20Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II/PopulatingNextRightPointersInEachNodeII.cpp) 没有找到其突破口，看参考代码暂未理解。
     
   * 181225

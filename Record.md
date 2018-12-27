@@ -183,7 +183,11 @@
      117题仍未解出。又看了105题。
   
   * 181226
+  [083. Remove Duplicates from Sorted List](https://github.com/rensandao/LeetCode/blob/master/083.%20Remove%20Duplicates%20from%20Sorted%20List/RemoveDuplicatesfromSortedList.cpp)
+  迭代法。递归的方法没有能写出。
   
+  * 181227
+ [082. Remove Duplicates from Sorted List II](https://github.com/rensandao/LeetCode/blob/master/082.%20Remove%20Duplicates%20from%20Sorted%20List%20II/RemoveDuplicatesfromSortedListII.cpp) 三种的方式。其中总结做链表题的基本原则——主链思想以及单链表的单向性特点注意点。
   
   
   

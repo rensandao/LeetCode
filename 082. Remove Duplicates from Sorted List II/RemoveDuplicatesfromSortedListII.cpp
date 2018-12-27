@@ -11,6 +11,12 @@ First Creation: 2018-12-26
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+
+/*
+思路1：迭代。
+思路演绎：
+
+*/
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {

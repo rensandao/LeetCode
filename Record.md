@@ -179,8 +179,7 @@
     [117. Populating Next Right Pointers in Each Node II](https://github.com/rensandao/LeetCode/blob/master/117.%20Populating%20Next%20Right%20Pointers%20in%20Each%20Node%20II/PopulatingNextRightPointersInEachNodeII.cpp) 没有找到其突破口，看参考代码暂未理解。
     
   * 181225
-  
-     117题仍未解出。又看了105题。
+  117题仍未解出。又看了105题。
   
   * 181226
   [083. Remove Duplicates from Sorted List](https://github.com/rensandao/LeetCode/blob/master/083.%20Remove%20Duplicates%20from%20Sorted%20List/RemoveDuplicatesfromSortedList.cpp)

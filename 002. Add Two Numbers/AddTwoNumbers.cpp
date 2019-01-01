@@ -1,7 +1,7 @@
 /************************
 Source:
 Author: rensandao
-First creation：2018-12-27
+First created： 2018-12-27
 *************************/
 /**
  * Definition for singly-linked list.
@@ -17,6 +17,7 @@ First creation：2018-12-27
 思路1： 递归。
 可挖掘的信息有： 1）需要考虑到有进位和两链表不同长短。
 
+Reference:
 
 */
 //

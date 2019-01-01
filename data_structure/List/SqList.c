@@ -99,14 +99,3 @@ Status ListDelete(SqList *L, int i, ElemType *e)
   return OK;
 }
 
-
-
-
-
-
-
-
-
-
-
-

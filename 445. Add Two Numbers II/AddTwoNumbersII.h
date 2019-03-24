@@ -5,7 +5,7 @@ struct ListNode {
         int val;
         ListNode *next;
         ListNode(int x) : val(x), next(nullptr) {}
-    };
+};
 
 //declaration for head insert method 
 ListNode* HeadInsert(int sum, ListNode* res);

@@ -57,11 +57,9 @@ ListNode* Solution445_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
         ptr2 = ptr2->next;
         len2++;
     }
-
+	
     //step1: strategy to operate addition
-    ptr1 = l1;
-    ptr2 = l2;
-
+    ptr1 = l1; ptr2 = l2;
     while (len1 > 0 && len2 > 0) {
         int sum = 0;
         if (len1 >= len2) {
@@ -76,6 +74,7 @@ ListNode* Solution445_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
         }
         res = HeadInsert(sum, res);
     }
+	
     //step2: carry and inverse
     ptr1 = res; int carry = 0;
     ListNode* res1 = nullptr;

@@ -44,58 +44,57 @@ R1:
 3.
 */
 ListNode* Solution445_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
-    //add
-    int len1 = 0, len2 = 0;
-    ListNode *ptr1 = l1, *ptr2 = l2, *res = nullptr;
+	int len1 = 0, len2 = 0;
+	ListNode *ptr1 = l1, *ptr2 = l2, *res = nullptr;
 
-    //get each length for use
-    while (ptr1) {
-        ptr1 = ptr1->next;
-        len1++;
-    }
-    while (ptr2) {
-        ptr2 = ptr2->next;
-        len2++;
-    }
-	
-    //step1: strategy to operate addition
-    ptr1 = l1; ptr2 = l2;
-    while (len1 > 0 && len2 > 0) {
-        int sum = 0;
-        if (len1 >= len2) {
-            sum += ptr1->val;
-            ptr1 = ptr1->next;
-            len1--;
-        }
-        if (len1 < len2) {
-            sum += ptr2->val;
-            ptr2 = ptr2->next;
-            len2--;
-        }
-        res = HeadInsert(sum, res);
-    }
-	
-    //step2: carry and inverse
-    ptr1 = res; int carry = 0;
-    ListNode* res1 = nullptr;
-    while (ptr1) {
-        int newVal = 0;
-        newVal = (ptr1->val + carry) % 10;
-        carry = (ptr1->val + carry) / 10;
+	//get each length for use
+	while (ptr1) {
+			ptr1 = ptr1->next;
+			len1++;
+	}
+	while (ptr2) {
+			ptr2 = ptr2->next;
+			len2++;
+	}
 
-        ptr2 = ptr1;
-        ptr1 = ptr1->next;
-        res1 = HeadInsert(newVal, res1);
-        delete ptr2; //avoid memory leakage
-    }
-    if(carry > 0) {
-        res1 = HeadInsert(1,res1);
-    }
-    return res1;
+	//step1: strategy to operate addition
+	ptr1 = l1; ptr2 = l2;
+	while (len1 > 0 && len2 > 0) {
+			int sum = 0;
+			if (len1 >= len2) {
+					sum += ptr1->val;
+					ptr1 = ptr1->next;
+					len1--;
+			}
+			if (len1 < len2) {
+					sum += ptr2->val;
+					ptr2 = ptr2->next;
+					len2--;
+			}
+			res = HeadInsert(sum, res);
+	}
+	
+	//step2: carry and inverse
+	ptr1 = res; int carry = 0;
+	ListNode* res1 = nullptr;
+	while (ptr1) {
+		int newVal = 0;
+		newVal = (ptr1->val + carry) % 10;
+		carry = (ptr1->val + carry) / 10;
+
+		ptr2 = ptr1;
+		ptr1 = ptr1->next;
+		res1 = HeadInsert(newVal, res1);
+		delete ptr2; //avoid memory leakage
+	}
+	if(carry > 0) {
+		res1 = HeadInsert(1,res1);
+	}
+	return res1;
 }
 
 ListNode* HeadInsert(int sum, ListNode* res) {
-    ListNode* temp = new ListNode(sum);
-    temp->next = res;
-    return temp;
+	ListNode* temp = new ListNode(sum);
+	temp->next = res;
+	return temp;
 }

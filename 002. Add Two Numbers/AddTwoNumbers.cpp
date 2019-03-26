@@ -19,7 +19,7 @@ using namespace lcpp;
 //36ms, 98.89% faseter, 12.4MB
 ListNode* Solution002_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
     ListNode *res = nullptr, *ptr1 = l1, *ptr2 = l2;
-
+	//1.add two
     while (ptr1 || ptr2) {
         int sum = 0;
         if (ptr1) { sum += ptr1->val; ptr1 = ptr1->next; }
@@ -27,7 +27,7 @@ ListNode* Solution002_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
 
         res = HeadInsert(sum, res);
     }
-
+	//2.inverse res
     ptr1 = res; res = nullptr;
     while (ptr1) {
         res = HeadInsert(ptr1->val, res);
@@ -35,7 +35,7 @@ ListNode* Solution002_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
         ptr1 = ptr1->next;
         delete ptr2;
     }
-
+	//3.handle the carry 
     ptr1 = res; res = nullptr;
     int carry = 0, sum1 = 0;
     while (ptr1) {
@@ -48,7 +48,7 @@ ListNode* Solution002_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
         delete ptr2;
     }
     if (carry) res = HeadInsert(1, res);
-
+	//4.inverse res agagin.
     ptr1 = res; res = nullptr;
     while (ptr1) {
         res = HeadInsert(ptr1->val, res);
@@ -60,6 +60,7 @@ ListNode* Solution002_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
     return res;
 }
 
+//head insert func
 ListNode* HeadInsert(int sum, ListNode* res) {
     ListNode* temp = new ListNode(sum);
     temp->next = res;

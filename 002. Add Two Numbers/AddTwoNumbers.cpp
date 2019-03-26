@@ -3,27 +3,65 @@ Source:
 Author: rensandao
 First created： 2018-12-27
 *************************/
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
- 
-/*
-181228
-思路1： 递归。
-可挖掘的信息有： 1）需要考虑到有进位和两链表不同长短。
+#include "AddTwoNumbers.h"
 
-Reference:
+using namespace lcpp;
 
+/*190326
+昨天先做了题445，利用相同方法，回头来看比较繁琐。是一种时间换空间方式，AD结果蛮高。
+思路1：利用链长度和移位
+1. 对应相加的sum利用头插法插入新的链表。
+2. 由于头插法带来顺序问题，需要两次反转操作；
+3. 解决carry进位问题。
 */
-//
-class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        
+
+//190326 
+//36ms, 98.89% faseter, 12.4MB
+ListNode* Solution002_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
+    ListNode *res = nullptr, *ptr1 = l1, *ptr2 = l2;
+
+    while (ptr1 || ptr2) {
+        int sum = 0;
+        if (ptr1) { sum += ptr1->val; ptr1 = ptr1->next; }
+        if (ptr2) { sum += ptr2->val; ptr2 = ptr2->next; }
+
+        res = HeadInsert(sum, res);
     }
-}]
+
+    ptr1 = res; res = nullptr;
+    while (ptr1) {
+        res = HeadInsert(ptr1->val, res);
+        ptr2 = ptr1;
+        ptr1 = ptr1->next;
+        delete ptr2;
+    }
+
+    ptr1 = res; res = nullptr;
+    int carry = 0, sum1 = 0;
+    while (ptr1) {
+        sum1 = (ptr1->val + carry) % 10;
+        carry = (ptr1->val + carry) / 10;
+        res = HeadInsert(sum1, res);
+
+        ptr2 = ptr1;
+        ptr1 = ptr1->next;
+        delete ptr2;
+    }
+    if (carry) res = HeadInsert(1, res);
+
+    ptr1 = res; res = nullptr;
+    while (ptr1) {
+        res = HeadInsert(ptr1->val, res);
+        ptr2 = ptr1;
+        ptr1 = ptr1->next;
+        delete ptr2;
+    }
+
+    return res;
+}
+
+ListNode* HeadInsert(int sum, ListNode* res) {
+    ListNode* temp = new ListNode(sum);
+    temp->next = res;
+    return temp;
+}

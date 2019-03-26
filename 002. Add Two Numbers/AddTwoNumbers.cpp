@@ -28,7 +28,7 @@ ListNode* Solution002_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
         res = HeadInsert(sum, res);
     }
 	
-	//2.inverse res
+	//2.inverse result
     ptr1 = res; res = nullptr;
     while (ptr1) {
         res = HeadInsert(ptr1->val, res);
@@ -51,7 +51,7 @@ ListNode* Solution002_1::addTwoNumbers(ListNode* l1, ListNode* l2) {
     }
     if (carry) res = HeadInsert(1, res);
 	
-	//4.inverse res agagin.
+	//4.inverse result agagin.
     ptr1 = res; res = nullptr;
     while (ptr1) {
         res = HeadInsert(ptr1->val, res);

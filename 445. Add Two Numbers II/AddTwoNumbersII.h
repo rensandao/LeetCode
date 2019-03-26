@@ -12,7 +12,7 @@ ListNode* HeadInsert(int sum, ListNode* res);
 
 namespace lcpp {
 class Solution445_1 {
- public:
+public:
 	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
 };
 }
